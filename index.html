@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YBrs. Ts. Khabilen Rajamahendran | Cybersecurity & Scam Awareness</title>
+
+    <meta name="description" content="Official professional website of YBrs. Ts. Khabilen Rajamahendran, Head of IT and Cyber Security and Professional Technologist (Ts.), focusing on cybersecurity, scam awareness, social engineering and digital safety.">
+
+    <meta name="author" content="YBrs. Ts. Khabilen Rajamahendran">
+
+    <meta name="keywords" content="Khabilen Rajamahendran, cybersecurity, cyber security, scam awareness, social engineering, network security, IT security, digital safety, Professional Technologist, MBOT, TVET">
+
+    <meta name="robots" content="index, follow">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #e8eef7;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 17, 31, 0.95);
+            border-bottom: 1px solid #1e344d;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 70px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #b8c7d9;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.15), transparent 30%),
+                radial-gradient(circle at 20% 80%, rgba(30, 64, 175, 0.15), transparent 30%);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 7px 14px;
+            border: 1px solid #285273;
+            border-radius: 30px;
+            color: #7dd3fc;
+            font-size: 13px;
+            margin-bottom: 25px;
+            background: rgba(14, 165, 233, 0.08);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            font-size: clamp(20px, 3vw, 30px);
+            font-weight: 400;
+            color: #c5d4e5;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            font-size: 18px;
+            color: #9fb1c5;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 13px 22px;
+            border-radius: 7px;
+            border: 1px solid #2b4a66;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #0284c7;
+            border-color: #0284c7;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0369a1;
+        }
+
+        .btn-secondary:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 90px 0;
+            border-top: 1px solid #172a40;
+        }
+
+        .section-title {
+            margin-bottom: 45px;
+        }
+
+        .section-title small {
+            color: #38bdf8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            color: #94a8bd;
+            max-width: 700px;
+            margin-top: 10px;
+        }
+
+        /* Cards */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #0b1a2b;
+            border: 1px solid #1d344b;
+            border-radius: 12px;
+            padding: 28px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #2876a3;
+        }
+
+        .card-icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #91a5ba;
+            font-size: 15px;
+        }
+
+        /* About */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .about-text p {
+            color: #a8b8c9;
+            margin-bottom: 18px;
+        }
+
+        .credentials {
+            background: #0b1a2b;
+            border: 1px solid #1d344b;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .credential {
+            padding: 15px 0;
+            border-bottom: 1px solid #1d344b;
+        }
+
+        .credential:last-child {
+            border-bottom: none;
+        }
+
+        .credential strong {
+            display: block;
+            color: #dce8f4;
+        }
+
+        .credential span {
+            color: #8196aa;
+            font-size: 14px;
+        }
+
+        /* Awareness */
+
+        .awareness {
+            background: #091827;
+        }
+
+        .warning-box {
+            border-left: 4px solid #38bdf8;
+            background: #0b1a2b;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box h3 {
+            margin-bottom: 8px;
+        }
+
+        .warning-box p {
+            color: #9eb0c2;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 45px 0;
+            border-top: 1px solid #1d344b;
+            color: #71859a;
+            font-size: 14px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 800px) {
+            .nav-links {
+                display: none;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="container nav-inner">
+        <div class="logo">Khabilen<span>.</span></div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#cybersecurity">Cybersecurity</a></li>
+            <li><a href="#scam-awareness">Scam Awareness</a></li>
+            <li><a href="#credentials">Credentials</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+    <div class="container hero-content">
+
+        <div class="badge">
+            PROFESSIONAL TECHNOLOGIST (Ts.) · CYBERSECURITY
+        </div>
+
+        <h1>
+            YBrs. Ts.<br>
+            <span>Khabilen Rajamahendran</span>
+        </h1>
+
+        <h2>
+            Head of IT and Cyber Security
+        </h2>
+
+        <p>
+            Cybersecurity professional and technical educator focused on
+            cybersecurity awareness, scam prevention, network security,
+            IT infrastructure and digital safety.
+        </p>
+
+        <div class="buttons">
+            <a href="#cybersecurity" class="btn btn-primary">
+                Cybersecurity Awareness
+            </a>
+
+            <a href="#about" class="btn btn-secondary">
+                Professional Profile
+            </a>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+    <div class="container">
+
+        <div class="section-title">
+            <small>Professional Profile</small>
+            <h2>About Me</h2>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    <strong>YBrs. Ts. Khabilen A/L Rajamahendran</strong>
+                    is a Malaysian IT and cybersecurity professional serving
+                    as Head of IT and Cyber Security.
+                </p>
+
+                <p>
+                    His professional interests include cybersecurity,
+                    computer networks and security, IT infrastructure,
+                    server administration, digital safety and technical
+                    and vocational education and training (TVET).
+                </p>
+
+                <p>
+                    Through this platform, he shares practical cybersecurity
+                    awareness and scam-prevention information to help
+                    individuals make safer and more informed decisions
+                    in an increasingly connected digital environment.
+                </p>
+
+            </div>
+
+            <div class="credentials">
+
+                <div class="credential">
+                    <strong>Professional Designation</strong>
+                    <span>Professional Technologist (Ts.)</span>
+                </div>
+
+                <div class="credential">
+                    <strong>Professional Field</strong>
+                    <span>Information & Communication Technology</span>
+                </div>
+
+                <div class="credential">
+                    <strong>Specialisation</strong>
+                    <span>Cybersecurity & Computer Networks</span>
+                </div>
+
+                <div class="credential">
+                    <strong>Professional Focus</strong>
+                    <span>IT Security · Digital Safety · TVET</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CYBERSECURITY -->
+
+<section id="cybersecurity">
+    <div class="container">
+
+        <div class="section-title">
+            <small>Stay Informed</small>
+            <h2>Cybersecurity Awareness</h2>
+
+            <p>
+                Understanding how attacks work is one of the first steps
+                towards protecting yourself, your organisation and your
+                digital identity.
+            </p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>Cybersecurity</h3>
+                <p>
+                    Practical guidance on protecting systems, accounts,
+                    devices, networks and digital information.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🧠</div>
+                <h3>Social Engineering</h3>
+                <p>
+                    Learn how manipulation, trust and psychological
+                    techniques are used to influence human behaviour.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🔗</div>
+                <h3>Phishing Awareness</h3>
+                <p>
+                    Understand suspicious messages, fake websites,
+                    malicious links and common phishing techniques.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- SCAM AWARENESS -->
+
+<section id="scam-awareness" class="awareness">
+    <div class="container">
+
+        <div class="section-title">
+            <small>Public Awareness</small>
+            <h2>Scam Awareness</h2>
+
+            <p>
+                Scammers increasingly use technology, social media and
+                psychological manipulation to create convincing situations.
+            </p>
+        </div>
+
+        <div class="warning-box">
+            <h3>🚨 Don't Trust the Presentation. Understand the Mechanism.</h3>
+
+            <p>
+                A professional presentation, testimonials, social proof,
+                group influence or an impressive lifestyle does not
+                automatically establish that an opportunity is legitimate.
+                Independent verification and due diligence remain essential.
+            </p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">📱</div>
+                <h3>Social Media Scams</h3>
+                <p>
+                    Recognise suspicious profiles, misleading offers,
+                    impersonation and deceptive online interactions.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💳</div>
+                <h3>Financial Scams</h3>
+                <p>
+                    Learn how to identify unrealistic claims, hidden risks,
+                    pressure tactics and requests for money or information.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🤖</div>
+                <h3>AI-Enabled Scams</h3>
+                <p>
+                    Understand how artificial intelligence can be used to
+                    create convincing messages, images, voices and identities.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CREDENTIALS -->
+
+<section id="credentials">
+    <div class="container">
+
+        <div class="section-title">
+            <small>Professional Background</small>
+            <h2>Credentials & Expertise</h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Professional Technologist</h3>
+                <p>
+                    Professional Technologist (Ts.) registered in the
+                    Information & Communication Technology field.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Cybersecurity</h3>
+                <p>
+                    Focused on cybersecurity awareness, security controls,
+                    network security and digital risk.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>TVET</h3>
+                <p>
+                    Technical and vocational education, skills development
+                    and practical IT training.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PRINCIPLE -->
+
+<section>
+    <div class="container">
+
+        <div class="section-title">
+            <small>A Simple Principle</small>
+            <h2>Pause. Verify. Think.</h2>
+
+            <p>
+                Cybersecurity is not only about protecting devices and
+                networks. It is also about protecting our judgement.
+            </p>
+
+            <p>
+                Before you click. Before you invest. Before you trust.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="container footer-inner">
+
+        <div>
+            © 2026 YBrs. Ts. Khabilen Rajamahendran
+        </div>
+
+        <div>
+            Cybersecurity · Scam Awareness · Digital Safety
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
