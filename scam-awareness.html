@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Scam Awareness | YBrs. Ts. Khabilen Rajamahendran</title>
+
+    <meta name="description"
+          content="Online scam awareness guidance covering social engineering, manipulation, phishing, financial scams and practical verification methods.">
+
+    <meta name="author"
+          content="YBrs. Ts. Khabilen Rajamahendran">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #e8eef7;
+            line-height: 1.8;
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 17, 31, 0.95);
+            border-bottom: 1px solid #1e3a4d;
+        }
+
+        .nav-inner {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* HEADER */
+
+        header {
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 7px 15px;
+            border: 1px solid #285273;
+            border-radius: 30px;
+            color: #7dd3fc;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        header h1 span {
+            color: #38bdf8;
+        }
+
+        header p {
+            max-width: 700px;
+            margin: auto;
+            color: #9fb1c5;
+            font-size: 18px;
+        }
+
+        /* ARTICLE */
+
+        article {
+            padding: 40px 0 100px;
+        }
+
+        .article-box {
+            background: #0b1728;
+            border: 1px solid #1e3a4d;
+            border-radius: 12px;
+            padding: 45px;
+        }
+
+        .article-meta {
+            color: #7dd3fc;
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+
+        article h2 {
+            color: #f1f5f9;
+            font-size: 28px;
+            margin: 45px 0 15px;
+        }
+
+        article h3 {
+            color: #38bdf8;
+            font-size: 21px;
+            margin: 30px 0 10px;
+        }
+
+        article p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        article ul {
+            margin: 15px 0 25px 25px;
+            color: #cbd5e1;
+        }
+
+        article li {
+            margin-bottom: 10px;
+        }
+
+        .warning-box {
+            margin: 30px 0;
+            padding: 25px;
+            border-left: 4px solid #38bdf8;
+            background: #0e2135;
+            border-radius: 6px;
+        }
+
+        .warning-box strong {
+            color: #7dd3fc;
+        }
+
+        .framework {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .framework div {
+            padding: 20px;
+            background: #102238;
+            border: 1px solid #1e3a4d;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .framework strong {
+            display: block;
+            color: #38bdf8;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #1e3a4d;
+            padding: 30px 0;
+            color: #8495a7;
+            font-size: 14px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .article-box {
+                padding: 25px;
+            }
+
+            .framework {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-inner">
+
+        <div class="logo">
+            Khabilen.
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#cybersecurity">Cybersecurity</a>
+            <a href="index.html#scam-awareness">Scam Awareness</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<header>
+
+    <div class="container">
+
+        <div class="badge">
+            CYBERSECURITY AWARENESS
+        </div>
+
+        <h1>
+            Online Scam<br>
+            <span>Awareness</span>
+        </h1>
+
+        <p>
+            How manipulation, pressure and deception are used online —
+            and how individuals can make safer and more informed decisions.
+        </p>
+
+    </div>
+
+</header>
+
+
+<article>
+
+    <div class="container">
+
+        <div class="article-box">
+
+            <div class="article-meta">
+                Published by YBrs. Ts. Khabilen Rajamahendran
+            </div>
+
+
+            <h2>Introduction</h2>
+
+            <p>
+                Online scams are becoming increasingly sophisticated.
+                Modern scammers may combine technology, social media,
+                persuasive communication and psychological manipulation
+                to create situations that appear genuine.
+            </p>
+
+            <p>
+                A scam does not always look obviously suspicious.
+                It may begin with a friendly conversation, an attractive
+                opportunity, a convincing message or a recommendation
+                from someone who appears trustworthy.
+            </p>
+
+            <div class="warning-box">
+
+                <strong>Important:</strong>
+
+                A professional appearance, positive testimonials,
+                social media popularity or confident presentation does
+                not by itself establish that an opportunity is legitimate.
+                Independent verification remains essential.
+
+            </div>
+
+
+            <h2>1. Understand Social Engineering</h2>
+
+            <p>
+                Social engineering refers to techniques that influence
+                people into taking actions they might not otherwise take.
+                Instead of attacking technology directly, the attacker
+                attempts to influence human behaviour.
+            </p>
+
+            <p>
+                Common psychological triggers may include:
+            </p>
+
+            <ul>
+                <li>Fear</li>
+                <li>Urgency</li>
+                <li>Curiosity</li>
+                <li>Authority</li>
+                <li>Trust</li>
+                <li>Reward or financial motivation</li>
+            </ul>
+
+
+            <h2>2. Be Careful With Urgency and Pressure</h2>
+
+            <p>
+                One common warning sign is pressure to make a decision
+                quickly.
+            </p>
+
+            <p>
+                Statements suggesting that an opportunity will disappear,
+                that immediate payment is required, or that questioning
+                the opportunity demonstrates a lack of commitment should
+                be treated carefully.
+            </p>
+
+            <p>
+                Legitimate opportunities should generally allow reasonable
+                time for independent consideration and verification.
+            </p>
+
+
+            <h2>3. Do Not Rely Only on Testimonials</h2>
+
+            <p>
+                Testimonials and success stories can influence perception.
+                However, individual experiences do not necessarily prove
+                that the same outcome is achievable for everyone.
+            </p>
+
+            <p>
+                Before relying on testimonials, consider asking:
+            </p>
+
+            <ul>
+                <li>Can the claims be independently verified?</li>
+                <li>Are the risks clearly explained?</li>
+                <li>Are unsuccessful outcomes also disclosed?</li>
+                <li>Is there reliable documentation supporting the claims?</li>
+            </ul>
+
+
+            <h2>4. Understand Social Proof and Group Influence</h2>
+
+            <p>
+                People naturally tend to place greater confidence in
+                something when many other people appear to support it.
+                This is known as social proof.
+            </p>
+
+            <p>
+                Large groups, enthusiastic communities, repeated success
+                stories and highly positive environments can create a
+                strong perception of credibility.
+            </p>
+
+            <p>
+                However, popularity should not replace independent
+                verification.
+            </p>
+
+
+            <h2>5. Be Critical of Financial Claims</h2>
+
+            <p>
+                Financial opportunities deserve particular attention when
+                they involve unusually high returns, guaranteed income or
+                claims that appear significantly better than normal market
+                expectations.
+            </p>
+
+            <p>
+                Ask for clear information about:
+            </p>
+
+            <ul>
+                <li>How money is generated</li>
+                <li>All required costs</li>
+                <li>Potential losses</li>
+                <li>Terms and conditions</li>
+                <li>Refund policies</li>
+                <li>Independent evidence supporting financial claims</li>
+            </ul>
+
+
+            <h2>6. Protect Personal and Financial Information</h2>
+
+            <p>
+                Never provide sensitive information simply because someone
+                appears trustworthy.
+            </p>
+
+            <p>
+                Be particularly careful with passwords, authentication
+                codes, banking credentials, identity documents and other
+                sensitive information.
+            </p>
+
+
+            <h2>7. Verify Independently</h2>
+
+            <p>
+                Independent verification is one of the most effective
+                ways to reduce the risk of deception.
+            </p>
+
+            <p>
+                Do not rely exclusively on information supplied by the
+                person promoting the opportunity.
+            </p>
+
+            <p>
+                Look for information from independent and authoritative
+                sources. Compare claims, investigate the organisation,
+                review official documentation and consider whether the
+                information is consistent across multiple reliable sources.
+            </p>
+
+
+            <h2>8. The STOP → VERIFY → THINK → ACT Framework</h2>
+
+            <p>
+                When something online creates strong emotions or pressure,
+                pause before taking action.
+            </p>
+
+            <div class="framework">
+
+                <div>
+                    <strong>STOP</strong>
+                    Don't react immediately.
+                </div>
+
+                <div>
+                    <strong>VERIFY</strong>
+                    Check the facts.
+                </div>
+
+                <div>
+                    <strong>THINK</strong>
+                    Consider the risks.
+                </div>
+
+                <div>
+                    <strong>ACT</strong>
+                    Make an informed decision.
+                </div>
+
+            </div>
+
+
+            <h2>9. What If You Suspect a Scam?</h2>
+
+            <p>
+                If something appears suspicious, stop communicating or
+                transferring money until you understand the situation.
+            </p>
+
+            <p>
+                Preserve relevant evidence such as messages, emails,
+                screenshots, payment records and website addresses.
+            </p>
+
+            <p>
+                Where appropriate, seek advice from the relevant financial,
+                law-enforcement or regulatory authorities.
+            </p>
+
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Cybersecurity is not only about protecting computers,
+                networks and accounts. It is also about protecting
+                judgement.
+            </p>
+
+            <p>
+                Technology can make deception more convincing, but
+                awareness can make individuals more resilient.
+            </p>
+
+            <div class="warning-box">
+
+                <strong>Remember:</strong>
+
+                Before you click. Before you invest. Before you trust.
+
+                <br><br>
+
+                <strong>Pause. Verify. Think.</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</article>
+
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+            © 2026 YBrs. Ts. Khabilen Rajamahendran
+        </div>
+
+        <div>
+            Cybersecurity · Scam Awareness · Digital Safety
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
