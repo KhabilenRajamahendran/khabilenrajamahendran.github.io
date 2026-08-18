@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://khabilenrajamahendran.github.io/sitemap.xml
