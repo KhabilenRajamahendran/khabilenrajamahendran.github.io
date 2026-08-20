@@ -1645,10 +1645,12 @@ async function askAI() {
         document.getElementById("aiSources");
 
 
+    // Clear previous result
     answer.innerHTML = "";
     sources.innerHTML = "";
 
 
+    // Validate question
     if (!question) {
 
         status.innerHTML =
@@ -1662,16 +1664,26 @@ async function askAI() {
         "Researching your question…";
 
 
+    // IMPORTANT:
+    // Use the production Cloudflare Worker directly.
+    const endpoint =
+        "https://mlm-awareness-ai.khabi.workers.dev/ask";
+
+
     try {
 
+        console.log("AI request starting...");
+        console.log("Endpoint:", endpoint);
+        console.log("Question:", question);
+
+
         const response =
-            await fetch(AI_ENDPOINT, {
+            await fetch(endpoint, {
 
                 method: "POST",
 
                 headers: {
-                    "Content-Type":
-                        "application/json"
+                    "Content-Type": "application/json"
                 },
 
                 body: JSON.stringify({
@@ -1681,32 +1693,77 @@ async function askAI() {
             });
 
 
-        const data =
-            await response.json();
+        console.log(
+            "Worker response status:",
+            response.status
+        );
 
 
-        if (!response.ok) {
+        // Read response as text first.
+        // This makes debugging much easier if Cloudflare
+        // returns HTML instead of JSON.
+        const responseText =
+            await response.text();
+
+
+        console.log(
+            "Worker raw response:",
+            responseText
+        );
+
+
+        let data;
+
+        try {
+
+            data =
+                JSON.parse(responseText);
+
+        } catch (parseError) {
 
             throw new Error(
-                data.error ||
-                "The research service returned an error."
+                "The Worker did not return JSON. HTTP " +
+                response.status +
+                ". Response: " +
+                responseText.substring(0, 500)
             );
         }
 
 
+        // Worker returned an HTTP error
+        if (!response.ok) {
+
+            throw new Error(
+                data.error ||
+                "The research service returned HTTP " +
+                response.status
+            );
+        }
+
+
+        // Make sure an answer exists
+        if (!data.answer) {
+
+            throw new Error(
+                "The Worker returned successfully, " +
+                "but Gemini did not return an answer."
+            );
+        }
+
+
+        // Success
         status.innerHTML =
             "Research completed.";
 
 
         answer.innerHTML =
             formatAIAnswer(
-                data.answer ||
-                "No answer was returned."
+                data.answer
             );
 
 
+        // Display sources
         if (
-            data.sources &&
             Array.isArray(data.sources) &&
             data.sources.length > 0
         ) {
@@ -1714,12 +1771,14 @@ async function askAI() {
             let html =
                 "<h3>Research sources</h3>";
 
+
             data.sources.forEach(
                 function(source) {
 
-                    if (!source.uri) {
+                    if (!source || !source.uri) {
                         return;
                     }
+
 
                     const title =
                         escapeHTML(
@@ -1727,10 +1786,12 @@ async function askAI() {
                             source.uri
                         );
 
+
                     const uri =
                         escapeAttribute(
                             source.uri
                         );
+
 
                     html += `
                         <a
@@ -1745,34 +1806,45 @@ async function askAI() {
                 }
             );
 
-            sources.innerHTML = html;
+
+            sources.innerHTML =
+                html;
         }
 
 
     } catch (error) {
 
-        console.error(error);
+        console.error(
+            "MLM AI ERROR:",
+            error
+        );
+
 
         status.innerHTML =
             "The AI research service could not be reached.";
+
 
         answer.innerHTML = `
 
             <div class="danger">
 
                 <strong>
-                Something went wrong.
+                    Something went wrong.
                 </strong>
 
                 <p>
-                ${escapeHTML(error.message)}
+                    ${escapeHTML(
+                        error.message ||
+                        "Unknown error"
+                    )}
                 </p>
 
                 <p>
-                Please try again in a moment.
+                    Please try again in a moment.
                 </p>
 
             </div>
+
         `;
     }
 }
