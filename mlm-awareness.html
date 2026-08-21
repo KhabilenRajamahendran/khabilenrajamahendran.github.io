@@ -486,6 +486,97 @@ footer {
     }
 }
 
+/* ============================================================
+   MLM COMPANY RISK ASSESSMENT
+   ============================================================ */
+
+.risk-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.risk-section h2 {
+    margin-top: 10px;
+}
+
+.risk-box {
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid rgba(80, 180, 255, 0.25);
+    border-radius: 16px;
+    background: rgba(8, 25, 45, 0.75);
+}
+
+.risk-score {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.risk-number {
+    font-size: 52px;
+    font-weight: 800;
+}
+
+.risk-label {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.risk-green {
+    border-left: 5px solid #35d07f;
+}
+
+.risk-yellow {
+    border-left: 5px solid #ffc857;
+}
+
+.risk-red {
+    border-left: 5px solid #ff5f6d;
+}
+
+.risk-card {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(20, 30, 50, 0.75);
+}
+
+.risk-card h3 {
+    margin-top: 0;
+}
+
+.risk-list {
+    padding-left: 22px;
+}
+
+.risk-list li {
+    margin-bottom: 10px;
+}
+
+.risk-source {
+    display: block;
+    margin-top: 8px;
+    color: #6fd3ff;
+    text-decoration: none;
+}
+
+.risk-source:hover {
+    text-decoration: underline;
+}
+
+.recommendation {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+
+
+
+    
+
 </style>
 </head>
 
@@ -561,6 +652,64 @@ Try the Calculator
 </a>
 
 <a class="btn" href="#discussion">
+
+<!-- ============================================================
+     MLM COMPANY RISK ASSESSMENT
+     ============================================================ -->
+
+<section id="risk-assessment" class="risk-section">
+
+    <div class="eyebrow">
+        MLM RISK ASSESSMENT
+    </div>
+
+    <h2>
+        Check an MLM company before you join.
+    </h2>
+
+    <p class="lead">
+        Enter the name of an MLM company and our research assistant
+        will analyse available information, identify potential
+        warning signs, highlight positive indicators and produce
+        an educational risk assessment.
+    </p>
+
+    <div class="ai-box">
+
+        <label for="companyName">
+            MLM company name
+        </label>
+
+        <input
+            type="text"
+            id="companyName"
+            placeholder="Example: ABC Network"
+            autocomplete="off"
+        >
+
+        <button
+            type="button"
+            class="ask-button"
+            onclick="assessMLMCompany()"
+        >
+            Assess Company
+        </button>
+
+        <div id="riskStatus" class="ai-status">
+        </div>
+
+        <div id="riskResult">
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+    
 Open Discussion
 </a>
 
@@ -1892,6 +2041,323 @@ function formatAIAnswer(text) {
 
 calculateRecruitment();
 
+/* ============================================================
+   MLM COMPANY RISK ASSESSMENT
+   ============================================================ */
+
+async function assessMLMCompany() {
+
+    const companyInput =
+        document.getElementById("companyName");
+
+    const status =
+        document.getElementById("riskStatus");
+
+    const result =
+        document.getElementById("riskResult");
+
+    const company =
+        companyInput.value.trim();
+
+    result.innerHTML = "";
+
+    if (!company) {
+
+        status.innerHTML =
+            "Please enter an MLM company name.";
+
+        return;
+    }
+
+    status.innerHTML =
+        "Researching " +
+        escapeHTML(company) +
+        "…";
+
+    try {
+
+        const response =
+            await fetch(AI_ENDPOINT, {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type":
+                        "application/json"
+                },
+
+                body: JSON.stringify({
+
+                    type: "company-risk",
+
+                    company: company
+
+                })
+
+            });
+
+        const data =
+            await response.json();
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.error ||
+                "The company research service returned an error."
+            );
+        }
+
+        status.innerHTML =
+            "Assessment completed.";
+
+        renderMLMRiskResult(
+            data,
+            company
+        );
+
+    } catch (error) {
+
+        console.error(error);
+
+        status.innerHTML =
+            "The company research service could not be reached.";
+
+        result.innerHTML = `
+
+            <div class="danger">
+
+                <strong>
+                    Something went wrong.
+                </strong>
+
+                <p>
+                    ${escapeHTML(error.message)}
+                </p>
+
+                <p>
+                    Please try again in a moment.
+                </p>
+
+            </div>
+
+        `;
+    }
+}
+
+
+/* ============================================================
+   DISPLAY RISK RESULT
+   ============================================================ */
+
+function renderMLMRiskResult(data, company) {
+
+    const result =
+        document.getElementById("riskResult");
+
+    const score =
+        Number(data.riskScore ?? 0);
+
+    const level =
+        data.riskLevel ||
+        "Unknown";
+
+    const recommendation =
+        data.recommendation ||
+        "Insufficient information.";
+
+    const summary =
+        data.summary ||
+        "No summary was returned.";
+
+    let riskClass =
+        "risk-yellow";
+
+    if (
+        level.toLowerCase() === "low" ||
+        level.toLowerCase() === "green"
+    ) {
+
+        riskClass =
+            "risk-green";
+
+    } else if (
+        level.toLowerCase() === "high" ||
+        level.toLowerCase() === "red"
+    ) {
+
+        riskClass =
+            "risk-red";
+    }
+
+
+    let redFlagsHTML = "";
+
+    if (
+        Array.isArray(data.redFlags) &&
+        data.redFlags.length
+    ) {
+
+        redFlagsHTML = `
+
+            <div class="risk-card">
+
+                <h3>
+                    🚩 Potential Red Flags
+                </h3>
+
+                <ul class="risk-list">
+
+                    ${data.redFlags.map(
+                        flag =>
+                            `<li>${escapeHTML(flag)}</li>`
+                    ).join("")}
+
+                </ul>
+
+            </div>
+        `;
+    }
+
+
+    let greenFlagsHTML = "";
+
+    if (
+        Array.isArray(data.greenFlags) &&
+        data.greenFlags.length
+    ) {
+
+        greenFlagsHTML = `
+
+            <div class="risk-card">
+
+                <h3>
+                    🟢 Positive Indicators
+                </h3>
+
+                <ul class="risk-list">
+
+                    ${data.greenFlags.map(
+                        flag =>
+                            `<li>${escapeHTML(flag)}</li>`
+                    ).join("")}
+
+                </ul>
+
+            </div>
+        `;
+    }
+
+
+    let sourcesHTML = "";
+
+    if (
+        Array.isArray(data.sources) &&
+        data.sources.length
+    ) {
+
+        sourcesHTML = `
+
+            <div class="risk-card">
+
+                <h3>
+                    Research Sources
+                </h3>
+
+                ${data.sources.map(source => {
+
+                    if (!source.uri) {
+                        return "";
+                    }
+
+                    return `
+                        <a
+                            class="risk-source"
+                            href="${escapeAttribute(source.uri)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ${escapeHTML(
+                                source.title ||
+                                source.uri
+                            )}
+                        </a>
+                    `;
+
+                }).join("")}
+
+            </div>
+        `;
+    }
+
+
+    result.innerHTML = `
+
+        <div class="risk-box ${riskClass}">
+
+            <div class="risk-score">
+
+                <div>
+
+                    <div class="risk-number">
+                        ${score}/10
+                    </div>
+
+                    <div class="risk-label">
+                        ${escapeHTML(level)} Risk
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="risk-card">
+
+                <h3>
+                    ${escapeHTML(company)}
+                </h3>
+
+                <p>
+                    ${escapeHTML(summary)}
+                </p>
+
+                <div class="recommendation">
+                    Recommendation:
+                    ${escapeHTML(recommendation)}
+                </div>
+
+            </div>
+
+
+            ${redFlagsHTML}
+
+            ${greenFlagsHTML}
+
+            ${sourcesHTML}
+
+
+            <div class="risk-card">
+
+                <p>
+                    <strong>Important:</strong>
+                    This assessment is educational and is not
+                    financial, legal or investment advice.
+                    A risk score is an indication based on the
+                    information available to the system and should
+                    not be treated as proof that a company is
+                    legitimate or fraudulent.
+                </p>
+
+            </div>
+
+        </div>
+
+    `;
+}
+
+
+
+    
 </script>
 
 </body>
