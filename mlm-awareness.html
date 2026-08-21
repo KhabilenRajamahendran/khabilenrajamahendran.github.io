@@ -1,1979 +1,341 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>MLM Awareness | YBrs. Ts. Khabilen Rajamahendran</title>
-
-<meta
-name="description"
-content="Educational MLM awareness resource covering research, compensation structures, recruitment mathematics, red flags, psychological pressure and responsible decision-making."
->
-
-<meta
-name="keywords"
-content="MLM awareness, multi level marketing, MLM research, recruitment mathematics, pyramid scheme, Ponzi scheme, compensation plan, MLM red flags, social pressure"
->
-
-<meta
-name="author"
-content="YBrs. Ts. Khabilen Rajamahendran"
->
-
-<link rel="canonical"
-href="https://khabilenrajamahendran.github.io/mlm-awareness.html"
->
-
-<style>
-
-:root {
-    --bg: #06101f;
-    --bg2: #081729;
-    --card: #0b1b2d;
-    --card2: #0d2034;
-    --border: #1d3b57;
-    --text: #e8f0f8;
-    --muted: #9fb5c9;
-    --cyan: #24c8ff;
-    --blue: #4e9fff;
-    --green: #45d483;
-    --yellow: #f5c451;
-    --red: #ff6875;
-    --purple: #b88cff;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-}
-
-a {
-    color: var(--cyan);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* NAVIGATION */
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background: rgba(6,16,31,0.96);
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid var(--border);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 14px 20px;
-}
-
-.logo {
-    font-size: 21px;
-    font-weight: 800;
-    color: white;
-}
-
-.logo span {
-    color: var(--cyan);
-}
-
-.nav-links {
-    display: flex;
-    gap: 22px;
-    flex-wrap: wrap;
-}
-
-.nav-links a {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.nav-links a:hover {
-    color: white;
-}
-
-/* GENERAL */
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-section {
-    padding: 90px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.eyebrow {
-    color: var(--cyan);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 13px;
-    font-weight: 700;
-}
-
-h1 {
-    font-size: clamp(38px, 6vw, 68px);
-    line-height: 1.05;
-    margin: 16px 0 25px;
-}
-
-h2 {
-    font-size: clamp(30px, 4vw, 46px);
-    line-height: 1.15;
-    margin: 12px 0 20px;
-}
-
-h3 {
-    color: white;
-    margin-top: 0;
-}
-
-.lead {
-    color: var(--muted);
-    font-size: 19px;
-    max-width: 850px;
-}
-
-.small {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* HERO */
-
-.hero {
-    padding: 110px 0 90px;
-    background:
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(36,200,255,0.12),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 20% 70%,
-            rgba(78,159,255,0.08),
-            transparent 30%
-        );
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: white;
-    font-weight: 600;
-}
-
-.btn.primary {
-    background: var(--cyan);
-    color: #00111c;
-    border-color: var(--cyan);
-}
-
-.btn:hover {
-    text-decoration: none;
-    transform: translateY(-1px);
-}
-
-/* CARDS */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-}
-
-.card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 28px;
-}
-
-.card p {
-    color: var(--muted);
-}
-
-.icon {
-    font-size: 30px;
-    margin-bottom: 12px;
-}
-
-/* IMPORTANT BOX */
-
-.notice {
-    background: rgba(36,200,255,0.07);
-    border: 1px solid rgba(36,200,255,0.3);
-    border-left: 4px solid var(--cyan);
-    padding: 22px;
-    border-radius: 10px;
-    margin: 25px 0;
-}
-
-.warning {
-    background: rgba(245,196,81,0.07);
-    border: 1px solid rgba(245,196,81,0.3);
-    border-left: 4px solid var(--yellow);
-    padding: 22px;
-    border-radius: 10px;
-}
-
-.danger {
-    background: rgba(255,104,117,0.07);
-    border: 1px solid rgba(255,104,117,0.3);
-    border-left: 4px solid var(--red);
-    padding: 22px;
-    border-radius: 10px;
-}
-
-/* TABLE */
-
-.table-wrap {
-    overflow-x: auto;
-    margin-top: 25px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 700px;
-}
-
-th,
-td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid var(--border);
-}
-
-th {
-    color: white;
-    background: var(--card2);
-}
-
-td {
-    color: var(--muted);
-}
-
-/* CALCULATOR */
-
-.calculator {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 30px;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
-
-label {
-    display: block;
-    color: #dce8f2;
-    font-weight: 600;
-    margin-bottom: 7px;
-}
-
-input,
-textarea {
-    width: 100%;
-    background: #061322;
-    color: white;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 12px;
-    font-size: 15px;
-}
-
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--cyan);
-}
-
-button {
-    cursor: pointer;
-    border: none;
-}
-
-.calc-button {
-    margin-top: 20px;
-    padding: 13px 22px;
-    border-radius: 8px;
-    background: var(--cyan);
-    color: #00111c;
-    font-weight: 800;
-}
-
-.result {
-    margin-top: 25px;
-    padding: 20px;
-    border-radius: 10px;
-    background: #061322;
-    border: 1px solid var(--border);
-}
-
-.result strong {
-    color: var(--cyan);
-    font-size: 22px;
-}
-
-/* STAGES */
-
-.stage {
-    position: relative;
-    padding-left: 28px;
-}
-
-.stage::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 5px;
-    bottom: 5px;
-    width: 3px;
-    background: var(--cyan);
-    border-radius: 5px;
-}
-
-.stage-number {
-    color: var(--cyan);
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* DISCUSSION */
-
-.discussion {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(36,200,255,0.04),
-            transparent
-        );
-}
-
-.ai-box {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 30px;
-}
-
-#question {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.ask-button {
-    margin-top: 15px;
-    padding: 13px 22px;
-    background: var(--cyan);
-    color: #00111c;
-    border-radius: 8px;
-    font-weight: 800;
-}
-
-#aiStatus {
-    margin-top: 15px;
-    color: var(--muted);
-}
-
-#aiAnswer {
-    margin-top: 25px;
-    white-space: pre-wrap;
-    color: #dce8f2;
-}
-
-.source {
-    display: block;
-    margin-top: 8px;
-    padding: 10px;
-    background: #061322;
-    border-radius: 7px;
-    border: 1px solid var(--border);
-}
-
-/* FOOTER */
-
-footer {
-    padding: 50px 20px;
-    text-align: center;
-    color: var(--muted);
-}
-
-.footer-links {
-    margin-top: 15px;
-}
-
-/* MOBILE */
-
-@media (max-width: 850px) {
-
-    .grid,
-    .grid-2,
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-container {
-        align-items: flex-start;
-        gap: 12px;
-        flex-direction: column;
-    }
-
-    .nav-links {
-        gap: 12px;
-    }
-
-    section {
-        padding: 65px 0;
-    }
-}
-
 /* ============================================================
    MLM COMPANY RISK ASSESSMENT
    ============================================================ */
 
-.risk-section {
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-.risk-section h2 {
-    margin-top: 10px;
-}
-
-.risk-box {
-    margin-top: 30px;
-    padding: 30px;
-    border: 1px solid rgba(80, 180, 255, 0.25);
-    border-radius: 16px;
-    background: rgba(8, 25, 45, 0.75);
-}
-
-.risk-score {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 25px;
-}
-
-.risk-number {
-    font-size: 52px;
-    font-weight: 800;
-}
-
-.risk-label {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.risk-green {
-    border-left: 5px solid #35d07f;
-}
-
-.risk-yellow {
-    border-left: 5px solid #ffc857;
-}
-
-.risk-red {
-    border-left: 5px solid #ff5f6d;
-}
-
-.risk-card {
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 12px;
-    background: rgba(20, 30, 50, 0.75);
-}
-
-.risk-card h3 {
-    margin-top: 0;
-}
-
-.risk-list {
-    padding-left: 22px;
-}
-
-.risk-list li {
-    margin-bottom: 10px;
-}
-
-.risk-source {
-    display: block;
-    margin-top: 8px;
-    color: #6fd3ff;
-    text-decoration: none;
-}
-
-.risk-source:hover {
-    text-decoration: underline;
-}
-
-.recommendation {
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 15px;
-}
-
-
-
-
-    
-
-</style>
-</head>
-
-<body>
-
-<!-- NAVIGATION -->
-
-<nav>
-
-<div class="nav-container">
-
-<div class="logo">
-Khabilen<span>.</span>
-</div>
-
-<div class="nav-links">
-
-<a href="index.html">About</a>
-
-<a href="index.html#cybersecurity">
-Cybersecurity
-</a>
-
-<a href="index.html#scam-awareness">
-Scam Awareness
-</a>
-
-<a href="mlm-awareness.html">
-MLM Awareness
-</a>
-
-<a href="index.html#credentials">
-Credentials
-</a>
-
-</div>
-
-</div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="container">
-
-<div class="eyebrow">
-PUBLIC AWARENESS
-</div>
-
-<h1>
-MLM Awareness
-</h1>
-
-<p class="lead">
-
-Before joining any multi-level marketing or network-marketing
-opportunity, understand the business model, compensation structure,
-product demand, recruitment requirements and financial mathematics.
-
-</p>
-
-<div class="hero-buttons">
-
-<a class="btn primary" href="#research">
-Start Researching
-</a>
-
-<a class="btn" href="#calculator">
-Try the Calculator
-</a>
-
-<a class="btn" href="#discussion">
-
-<!-- ============================================================
-     MLM COMPANY RISK ASSESSMENT
-     ============================================================ -->
-
-<section id="risk-assessment" class="risk-section">
-
-    <div class="eyebrow">
-        MLM RISK ASSESSMENT
-    </div>
-
-    <h2>
-        Check an MLM company before you join.
-    </h2>
-
-    <p class="lead">
-        Enter the name of an MLM company and our research assistant
-        will analyse available information, identify potential
-        warning signs, highlight positive indicators and produce
-        an educational risk assessment.
-    </p>
-
-    <div class="ai-box">
-
-        <label for="companyName">
-            MLM company name
-        </label>
-
-        <input
-            type="text"
-            id="companyName"
-            placeholder="Example: ABC Network"
-            autocomplete="off"
-        >
-
-        <button
-            type="button"
-            class="ask-button"
-            onclick="assessMLMCompany()"
-        >
-            Assess Company
-        </button>
-
-        <div id="riskStatus" class="ai-status">
-        </div>
-
-        <div id="riskResult">
-        </div>
-
-    </div>
-
-</section>
-
-
-
-
-
-    
-Open Discussion
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- INTRODUCTION -->
-
-<section>
-
-<div class="container">
-
-<div class="eyebrow">
-THINK BEFORE YOU JOIN
-</div>
-
-<h2>
-An opportunity deserves research before commitment.
-</h2>
-
-<p class="lead">
-
-MLM is not automatically a scam, Ponzi scheme or pyramid scheme.
-Different business models can have very different structures.
-
-The purpose of this page is not to attack legitimate businesses or
-people who participate in them.
-
-The objective is simple:
-
-<strong>
-understand the structure before putting in money, time, relationships
-or personal information.
-</strong>
-
-</p>
-
-<div class="notice">
-
-<strong>A useful question:</strong>
-
-If recruitment stopped tomorrow, would the business still have strong
-enough genuine customer demand for its products or services to
-continue operating?
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- RESEARCH -->
-
-<section id="research">
-
-<div class="container">
-
-<div class="eyebrow">
-STEP 1
-</div>
-
-<h2>
-Research the structure — not just the opportunity.
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<div class="icon">🔎</div>
-
-<h3>
-Investigate the company
-</h3>
-
-<p>
-Look for corporate information, management, product information,
-financial disclosures where available, regulatory information,
-complaints, litigation and independent reporting.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">📊</div>
-
-<h3>
-Understand the compensation plan
-</h3>
-
-<p>
-Don't rely only on motivational presentations.
-
-Understand exactly how commissions are generated, what activities
-qualify for payment and whether recruitment or purchases are required.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🧮</div>
-
-<h3>
-Do the mathematics
-</h3>
-
-<p>
-Ask how many customers are required, how many distributors are
-required and how the structure behaves when recruitment becomes
-increasingly difficult.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PRODUCT VS RECRUITMENT -->
-
-<section>
-
-<div class="container">
-
-<div class="eyebrow">
-BUSINESS MODEL
-</div>
-
-<h2>
-Product demand vs recruitment dependency
-</h2>
-
-<p class="lead">
-
-A useful way to analyse an opportunity is to examine where the economic
-activity actually comes from.
-
-</p>
-
-<div class="table-wrap">
-
-<table>
-
-<thead>
-
-<tr>
-<th>Question</th>
-<th>Product-driven model</th>
-<th>Recruitment-dependent model</th>
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>
-Where does revenue primarily come from?
-</td>
-
-<td>
-Sales of products/services to customers.
-</td>
-
-<td>
-May depend heavily on distributor recruitment,
-qualifying purchases or internal consumption.
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-What happens if recruitment stops?
-</td>
-
-<td>
-Customer demand can continue generating revenue.
-</td>
-
-<td>
-Growth and commission opportunities may become
-increasingly constrained.
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-Who is the customer?
-</td>
-
-<td>
-A genuine end consumer with a reason to purchase.
-</td>
-
-<td>
-Potentially another participant or distributor.
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-What should you investigate?
-</td>
-
-<td>
-Product demand, competition, pricing and margins.
-</td>
-
-<td>
-Recruitment requirements, incentives and
-compensation structure.
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-<div class="warning">
-
-<strong>Important:</strong>
-
-This table is an analytical framework, not a legal test for determining
-whether a particular company is legitimate or illegal.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- RECRUITMENT MATHEMATICS -->
-
-<section>
-
-<div class="container">
-
-<div class="eyebrow">
-THE MATHEMATICS
-</div>
-
-<h2>
-Why recruitment-based growth becomes difficult
-</h2>
-
-<p class="lead">
-
-If every participant is expected to recruit several additional
-participants, the number of people required grows exponentially.
-
-Consider a simplified example where every participant must recruit
-<strong>3 people</strong>.
-
-</p>
-
-<div class="table-wrap">
-
-<table>
-
-<thead>
-
-<tr>
-<th>Level</th>
-<th>New participants</th>
-<th>Total participants</th>
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-<td>1</td>
-<td>3</td>
-<td>3</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>9</td>
-<td>12</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>27</td>
-<td>39</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>81</td>
-<td>120</td>
-</tr>
-
-<tr>
-<td>5</td>
-<td>243</td>
-<td>363</td>
-</tr>
-
-<tr>
-<td>6</td>
-<td>729</td>
-<td>1,092</td>
-</tr>
-
-<tr>
-<td>10</td>
-<td>59,049</td>
-<td>88,572</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-<div class="notice">
-
-The mathematics does not prove that a particular company is a Ponzi
-scheme.
-
-It demonstrates why a recruitment-dependent model faces a structural
-growth problem when the available population of recruits is finite.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CALCULATOR -->
-
-<section id="calculator">
-
-<div class="container">
-
-<div class="eyebrow">
-INTERACTIVE CALCULATOR
-</div>
-
-<h2>
-Recruitment sustainability calculator
-</h2>
-
-<p class="lead">
-
-Use this simplified mathematical model to see how quickly a recruitment
-tree grows.
-
-This is an educational illustration — it does not determine the
-legality or legitimacy of any real company.
-
-</p>
-
-<div class="calculator">
-
-<div class="form-grid">
-
-<div>
-
-<label for="startingPeople">
-Starting participants
-</label>
-
-<input
-id="startingPeople"
-type="number"
-min="1"
-value="1"
->
-
-</div>
-
-<div>
-
-<label for="recruitsPerPerson">
-New recruits per participant
-</label>
-
-<input
-id="recruitsPerPerson"
-type="number"
-min="1"
-value="3"
->
-
-</div>
-
-<div>
-
-<label for="availablePopulation">
-Available potential participants
-</label>
-
-<input
-id="availablePopulation"
-type="number"
-min="1"
-value="100000"
->
-
-</div>
-
-<div>
-
-<label for="maximumLevels">
-Maximum levels to calculate
-</label>
-
-<input
-id="maximumLevels"
-type="number"
-min="1"
-max="30"
-value="20"
->
-
-</div>
-
-</div>
-
-<button
-class="calc-button"
-onclick="calculateRecruitment()"
->
-Calculate
-</button>
-
-<div
-id="calculatorResult"
-class="result"
->
-
-Enter the assumptions and click Calculate.
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- RED FLAGS -->
-
-<section>
-
-<div class="container">
-
-<div class="eyebrow">
-BEHAVIOURAL AWARENESS
-</div>
-
-<h2>
-Recognising escalating red flags
-</h2>
-
-<p class="lead">
-
-One isolated behaviour does not prove that an organisation is
-fraudulent.
-
-However, a combination of pressure, isolation, financial escalation
-and recruitment dependency deserves careful examination.
-
-</p>
-
-
-<div class="grid-2">
-
-<div class="card stage">
-
-<div class="stage-number">
-Stage 1 — Relationship & influence
-</div>
-
-<h3>
-The relationship changes
-</h3>
-
-<p>
-
-Examples may include:
-
-</p>
-
-<ul>
-
-<li>
-Love-bombing or unusually intense attention at the beginning.
-</li>
-
-<li>
-Rapidly presenting the opportunity as a life-changing solution.
-</li>
-
-<li>
-Discouraging questions or criticism.
-</li>
-
-<li>
-Calling people who question the opportunity "negative",
-"dream stealers" or similar labels.
-</li>
-
-<li>
-Encouraging participants to distance themselves from people who
-challenge the opportunity.
-</li>
-
-<li>
-Attempting to inspect private conversations or personal messages.
-</li>
-
-</ul>
-
-</div>
-
-
-<div class="card stage">
-
-<div class="stage-number">
-Stage 2 — Social & psychological pressure
-</div>
-
-<h3>
-Commitment begins to increase
-</h3>
-
-<p>
-
-Potential warning signs can include:
-
-</p>
-
-<ul>
-
-<li>
-Pressure to attend repeated meetings, events or motivational sessions.
-</li>
-
-<li>
-Increasing use of group identity and "us vs them" thinking.
-</li>
-
-<li>
-Failure being attributed mainly to lack of belief or effort.
-</li>
-
-<li>
-Questioning the model being treated as a personal or emotional attack.
-</li>
-
-<li>
-Pressure to recruit friends, relatives or colleagues.
-</li>
-
-<li>
-Encouragement to keep investing despite disappointing results.
-</li>
-
-<li>
-Promises of future success being used to justify current sacrifices.
-</li>
-
-</ul>
-
-</div>
-
-
-<div class="card stage">
-
-<div class="stage-number">
-Stage 3 — Financial & recruitment dependency
-</div>
-
-<h3>
-The economics become harder to ignore
-</h3>
-
-<p>
-
-Look carefully when:
-
-</p>
-
-<ul>
-
-<li>
-Recruitment becomes essential to maintain income or status.
-</li>
-
-<li>
-Purchases, subscriptions or recurring commitments increase.
-</li>
-
-<li>
-Participants are encouraged to recruit others to recover previous
-expenses.
-</li>
-
-<li>
-Income claims focus heavily on exceptional success stories.
-</li>
-
-<li>
-The number of participants appears to grow faster than genuine
-external customer demand.
-</li>
-
-<li>
-Leaving becomes psychologically or financially difficult.
-</li>
-
-<li>
-Participants are encouraged to make increasingly large commitments
-because they have already invested heavily.
-</li>
-
-</ul>
-
-</div>
-
-
-<div class="card stage">
-
-<div class="stage-number">
-Stage 4 — Stop & independently verify
-</div>
-
-<h3>
-Create distance before deciding
-</h3>
-
-<p>
-
-At this point, stop relying exclusively on the people recruiting you.
-
-</p>
-
-<ul>
-
-<li>
-Read the official compensation plan yourself.
-</li>
-
-<li>
-Calculate realistic expenses and income.
-</li>
-
-<li>
-Speak to people who left.
-</li>
-
-<li>
-Look for independent evidence.
-</li>
-
-<li>
-Check regulatory and legal information where relevant.
-</li>
-
-<li>
-Take time before making another payment.
-</li>
-
-<li>
-Never let urgency replace due diligence.
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- DECISION FRAMEWORK -->
-
-<section>
-
-<div class="container">
-
-<div class="eyebrow">
-DECISION CHECKLIST
-</div>
-
-<h2>
-Ask these questions before joining
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>1. Customers</h3>
-
-<p>
-Who is actually buying the product or service outside the distributor
-network?
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>2. Revenue</h3>
-
-<p>
-Can I understand exactly how the company generates revenue?
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>3. Compensation</h3>
-
-<p>
-Can I independently calculate how commissions are earned?
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>4. Costs</h3>
-
-<p>
-What are all the upfront, recurring and hidden costs?
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>5. Recruitment</h3>
-
-<p>
-Would my income depend significantly on recruiting other people?
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>6. Evidence</h3>
-
-<p>
-What independent evidence supports the income claims being presented?
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- DISCUSSION / AI -->
-
-<section
-id="discussion"
-class="discussion"
->
-
-<div class="container">
-
-<div class="eyebrow">
-OPEN DISCUSSION
-</div>
-
-<h2>
-Have a question? Ask it.
-</h2>
-
-<p class="lead">
-
-You can ask questions about MLM structures, recruitment mathematics,
-compensation plans, pyramid schemes, Ponzi schemes, psychological
-pressure, red flags or how to research an opportunity.
-
-The AI assistant will analyse the question and provide an
-educational answer using research where available.
-
-</p>
-
-<div class="ai-box">
-
-<label for="question">
-Your question
-</label>
-
-<textarea
-id="question"
-placeholder="Example: If an MLM requires me to recruit three people, what happens mathematically after several levels?"
-></textarea>
-
-<button
-class="ask-button"
-onclick="askAI()"
->
-Ask Research Assistant
-</button>
-
-<div id="aiStatus"></div>
-
-<div id="aiAnswer"></div>
-
-<div id="aiSources"></div>
-
-</div>
-
-<div class="notice">
-
-<strong>Discussion rules:</strong>
-
-Please do not post private information, bank details, phone numbers,
-passwords, personal documents or identifying information about other
-people.
-
-This discussion is intended for education and awareness.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- DISCLAIMER -->
-
-<section>
-
-<div class="container">
-
-<div class="eyebrow">
-IMPORTANT
-</div>
-
-<h2>
-Education is not a verdict.
-</h2>
-
-<p class="lead">
-
-This website provides educational information and mathematical
-illustrations.
-
-It does not automatically classify any MLM, company, individual or
-business opportunity as a scam, Ponzi scheme or pyramid scheme.
-
-Legal definitions vary by jurisdiction and require evidence.
-
-Before making financial or legal decisions, consult appropriate
-qualified professionals and independently verify the information.
-
-</p>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div>
-© 2026 YBrs. Ts. Khabilen Rajamahendran
-</div>
-
-<div class="footer-links">
-
-<a
-href="https://www.linkedin.com/in/ts-khabilen-rajamahendran-8a37a0358/"
-target="_blank"
-rel="noopener noreferrer"
->
-LinkedIn
-</a>
-
-&nbsp; · &nbsp;
-
-<a href="index.html">
-Main Website
-</a>
-
-</div>
-
-</footer>
-
-
-<script>
-
-/* ============================================================
-   RECRUITMENT CALCULATOR
-   ============================================================ */
-
-function calculateRecruitment() {
-
-    const starting =
-        Number(document.getElementById("startingPeople").value);
-
-    const recruits =
-        Number(document.getElementById("recruitsPerPerson").value);
-
-    const population =
-        Number(document.getElementById("availablePopulation").value);
-
-    const maxLevels =
-        Number(document.getElementById("maximumLevels").value);
+/*
+ * ============================================================
+ * MLM COMPANY RISK ASSESSMENT
+ * ============================================================
+ *
+ * Cloudflare Worker endpoint:
+ *
+ * https://mlm-awareness-ai.khabi.workers.dev/assess
+ *
+ * IMPORTANT:
+ * This is separate from /ask.
+ *
+ * /ask    = general MLM questions
+ * /assess = company risk assessment
+ * ============================================================
+ */
+
+const MLM_ASSESS_ENDPOINT =
+    "https://mlm-awareness-ai.khabi.workers.dev/assess";
+
+
+async function assessMLMCompany() {
+
+    const companyInput =
+        document.getElementById("companyName");
+
+    const status =
+        document.getElementById("riskStatus");
 
     const result =
-        document.getElementById("calculatorResult");
+        document.getElementById("riskResult");
+
+
+    /*
+     * ----------------------------------------------------------
+     * CHECK PAGE ELEMENTS
+     * ----------------------------------------------------------
+     */
 
     if (
-        starting < 1 ||
-        recruits < 1 ||
-        population < 1 ||
-        maxLevels < 1
+        !companyInput ||
+        !status ||
+        !result
     ) {
 
-        result.innerHTML =
-            "Please enter valid positive numbers.";
+        console.error(
+            "MLM risk assessment elements were not found."
+        );
 
         return;
     }
 
-    let current = starting;
-    let total = starting;
-    let levelReached = 0;
 
-    let rows = "";
+    /*
+     * ----------------------------------------------------------
+     * GET COMPANY NAME
+     * ----------------------------------------------------------
+     */
 
-    for (
-        let level = 1;
-        level <= maxLevels;
-        level++
-    ) {
+    const company =
+        companyInput.value.trim();
 
-        current = current * recruits;
 
-        total = total + current;
+    /*
+     * ----------------------------------------------------------
+     * CLEAR PREVIOUS RESULT
+     * ----------------------------------------------------------
+     */
 
-        levelReached = level;
+    result.innerHTML = "";
 
-        rows +=
-            `<tr>
-                <td>${level}</td>
-                <td>${Math.round(current).toLocaleString()}</td>
-                <td>${Math.round(total).toLocaleString()}</td>
-            </tr>`;
 
-        if (total >= population) {
-            break;
-        }
+    /*
+     * ----------------------------------------------------------
+     * VALIDATE
+     * ----------------------------------------------------------
+     */
+
+    if (!company) {
+
+        status.innerHTML =
+            "Please enter an MLM company name.";
+
+        companyInput.focus();
+
+        return;
     }
 
-    const populationReached =
-        total >= population;
+
+    if (company.length > 150) {
+
+        status.innerHTML =
+            "Please enter a shorter company name.";
+
+        return;
+    }
+
+
+    /*
+     * ----------------------------------------------------------
+     * LOADING
+     * ----------------------------------------------------------
+     */
+
+    status.innerHTML =
+        "🔎 Researching " +
+        escapeHTML(company) +
+        "…";
+
 
     result.innerHTML = `
 
-        <strong>
-        ${populationReached
-            ? "The model reaches the assumed population limit."
-            : "The model has not yet reached the assumed population limit."
-        }
-        </strong>
+        <div class="risk-box">
 
-        <p>
-        Starting with
-        <strong>${starting.toLocaleString()}</strong>
-        participant(s), with each participant recruiting
-        <strong>${recruits.toLocaleString()}</strong>
-        new participant(s), the simplified model reaches
-        approximately
-        <strong>${total.toLocaleString()}</strong>
-        cumulative participant positions after
-        <strong>${levelReached}</strong>
-        recruitment level(s).
-        </p>
+            <div class="risk-card">
 
-        <div class="table-wrap">
+                <h3>
+                    🔎 Researching ${escapeHTML(company)}
+                </h3>
 
-        <table>
+                <p>
+                    The system is analysing the company
+                    and evaluating potential MLM risk indicators.
+                </p>
 
-        <thead>
-        <tr>
-        <th>Level</th>
-        <th>New participants</th>
-        <th>Cumulative participants</th>
-        </tr>
-        </thead>
+                <p>
+                    Please wait…
+                </p>
 
-        <tbody>
-        ${rows}
-        </tbody>
-
-        </table>
+            </div>
 
         </div>
 
-        <p class="small">
-
-        This is a mathematical illustration of exponential recruitment
-        growth. It does not establish whether a particular business
-        operates as a pyramid scheme or Ponzi scheme.
-
-        </p>
     `;
-}
-
-
-/* ============================================================
-   AI RESEARCH ASSISTANT
-   ============================================================ */
-
-/*
-IMPORTANT:
-
-This must point to your Cloudflare Worker.
-
-Your Worker:
-https://mlm-awareness-ai.khabi.workers.dev
-
-The endpoint:
-https://mlm-awareness-ai.khabi.workers.dev/ask
-*/
-
-const AI_ENDPOINT =
-    "https://mlm-awareness-ai.khabi.workers.dev/ask";
-
-
-async function askAI() {
-
-    const question =
-        document.getElementById("question").value.trim();
-
-    const status =
-        document.getElementById("aiStatus");
-
-    const answer =
-        document.getElementById("aiAnswer");
-
-    const sources =
-        document.getElementById("aiSources");
-
-
-    // Clear previous result
-    answer.innerHTML = "";
-    sources.innerHTML = "";
-
-
-    // Validate question
-    if (!question) {
-
-        status.innerHTML =
-            "Please enter a question first.";
-
-        return;
-    }
-
-
-    status.innerHTML =
-        "Researching your question…";
-
-
-    // IMPORTANT:
-    // Use the production Cloudflare Worker directly.
-    const endpoint =
-        "https://mlm-awareness-ai.khabi.workers.dev/ask";
 
 
     try {
 
-        console.log("AI request starting...");
-        console.log("Endpoint:", endpoint);
-        console.log("Question:", question);
-
-
-        const response =
-            await fetch(endpoint, {
-
-                method: "POST",
-
-                headers: {
-                    "Content-Type": "application/json"
-                },
-
-                body: JSON.stringify({
-                    question: question
-                })
-
-            });
-
+        console.log(
+            "=========================================="
+        );
 
         console.log(
-            "Worker response status:",
-            response.status
+            "MLM COMPANY RISK ASSESSMENT"
+        );
+
+        console.log(
+            "Company:",
+            company
+        );
+
+        console.log(
+            "Endpoint:",
+            MLM_ASSESS_ENDPOINT
         );
 
 
-        // Read response as text first.
-        // This makes debugging much easier if Cloudflare
-        // returns HTML instead of JSON.
+        /*
+         * ------------------------------------------------------
+         * SEND REQUEST TO CLOUDFLARE WORKER
+         * ------------------------------------------------------
+         */
+
+        const response =
+            await fetch(
+                MLM_ASSESS_ENDPOINT,
+                {
+
+                    method: "POST",
+
+                    headers: {
+
+                        "Content-Type":
+                            "application/json"
+
+                    },
+
+                    body:
+                        JSON.stringify({
+
+                            company:
+                                company
+
+                        })
+
+                }
+            );
+
+
+        /*
+         * ------------------------------------------------------
+         * READ RAW RESPONSE
+         * ------------------------------------------------------
+         */
+
         const responseText =
             await response.text();
 
 
         console.log(
-            "Worker raw response:",
+            "HTTP status:",
+            response.status
+        );
+
+        console.log(
+            "Raw Worker response:",
             responseText
         );
 
+
+        /*
+         * ------------------------------------------------------
+         * PARSE JSON
+         * ------------------------------------------------------
+         */
 
         let data;
 
         try {
 
             data =
-                JSON.parse(responseText);
+                JSON.parse(
+                    responseText
+                );
 
         } catch (parseError) {
 
             throw new Error(
-                "The Worker did not return JSON. HTTP " +
+
+                "The Worker did not return valid JSON. " +
+                "HTTP " +
                 response.status +
                 ". Response: " +
-                responseText.substring(0, 500)
+                responseText.substring(
+                    0,
+                    500
+                )
+
             );
+
         }
 
 
-        // Worker returned an HTTP error
+        /*
+         * ------------------------------------------------------
+         * HTTP ERROR
+         * ------------------------------------------------------
+         */
+
         if (!response.ok) {
 
             throw new Error(
+
                 data.error ||
-                "The research service returned HTTP " +
+
+                "Company assessment returned HTTP " +
                 response.status
+
             );
+
         }
 
 
-        // Make sure an answer exists
-        if (!data.answer) {
+        /*
+         * ------------------------------------------------------
+         * WORKER RESPONSE
+         *
+         * Expected structure:
+         *
+         * {
+         *   assessment: {
+         *      riskScore,
+         *      riskLevel,
+         *      summary,
+         *      recommendation,
+         *      ...
+         *   },
+         *   sources: []
+         * }
+         * ------------------------------------------------------
+         */
+
+        const assessment =
+            data.assessment;
+
+
+        if (!assessment) {
 
             throw new Error(
-                "The Worker returned successfully, " +
-                "but Gemini did not return an answer."
+
+                "The Worker responded successfully, " +
+                "but no assessment was returned."
+
             );
+
         }
 
 
-        // Success
+        /*
+         * ------------------------------------------------------
+         * SUCCESS
+         * ------------------------------------------------------
+         */
+
         status.innerHTML =
-            "Research completed.";
+            "✅ Assessment completed.";
 
 
-        answer.innerHTML =
-            formatAIAnswer(
-                data.answer
-            );
+        renderMLMRiskResult(
+            assessment,
+            data.sources || [],
+            company
+        );
 
 
-        // Display sources
-        if (
-            Array.isArray(data.sources) &&
-            data.sources.length > 0
-        ) {
-
-            let html =
-                "<h3>Research sources</h3>";
-
-
-            data.sources.forEach(
-                function(source) {
-
-                    if (!source || !source.uri) {
-                        return;
-                    }
-
-
-                    const title =
-                        escapeHTML(
-                            source.title ||
-                            source.uri
-                        );
-
-
-                    const uri =
-                        escapeAttribute(
-                            source.uri
-                        );
-
-
-                    html += `
-                        <a
-                            class="source"
-                            href="${uri}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            ${title}
-                        </a>
-                    `;
-                }
-            );
-
-
-            sources.innerHTML =
-                html;
-        }
+        console.log(
+            "Assessment:",
+            assessment
+        );
 
 
     } catch (error) {
 
         console.error(
-            "MLM AI ERROR:",
+            "MLM assessment error:",
             error
         );
 
 
         status.innerHTML =
-            "The AI research service could not be reached.";
+            "The company research service could not be reached.";
 
 
-        answer.innerHTML = `
+        result.innerHTML = `
 
             <div class="danger">
 
@@ -1989,270 +351,238 @@ async function askAI() {
                 </p>
 
                 <p>
-                    Please try again in a moment.
+                    Please check the browser console
+                    for more information.
                 </p>
 
             </div>
 
         `;
+
     }
+
 }
 
 
 /* ============================================================
-   BASIC OUTPUT FORMATTING
+   RENDER MLM RISK RESULT
    ============================================================ */
 
-function escapeHTML(value) {
-
-    return String(value)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-}
-
-
-function escapeAttribute(value) {
-
-    return String(value)
-        .replace(/&/g, "&amp;")
-        .replace(/"/g, "&quot;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
-}
-
-
-function formatAIAnswer(text) {
-
-    const escaped =
-        escapeHTML(text);
-
-    return escaped
-        .replace(/\n\n/g, "<br><br>")
-        .replace(/\n/g, "<br>");
-}
-
-
-/* ============================================================
-   INITIAL CALCULATION
-   ============================================================ */
-
-calculateRecruitment();
-
-/* ============================================================
-   MLM COMPANY RISK ASSESSMENT
-   ============================================================ */
-
-async function assessMLMCompany() {
-
-    const companyInput =
-        document.getElementById("companyName");
-
-    const status =
-        document.getElementById("riskStatus");
+function renderMLMRiskResult(
+    assessment,
+    sources,
+    company
+) {
 
     const result =
-        document.getElementById("riskResult");
-
-    const company =
-        companyInput.value.trim();
-
-    result.innerHTML = "";
-
-    if (!company) {
-
-        status.innerHTML =
-            "Please enter an MLM company name.";
-
-        return;
-    }
-
-    status.innerHTML =
-        "Researching " +
-        escapeHTML(company) +
-        "…";
-
-    try {
-
-        const response =
-            await fetch(AI_ENDPOINT, {
-
-                method: "POST",
-
-                headers: {
-                    "Content-Type":
-                        "application/json"
-                },
-
-                body: JSON.stringify({
-
-                    type: "company-risk",
-
-                    company: company
-
-                })
-
-            });
-
-        const data =
-            await response.json();
-
-        if (!response.ok) {
-
-            throw new Error(
-                data.error ||
-                "The company research service returned an error."
-            );
-        }
-
-        status.innerHTML =
-            "Assessment completed.";
-
-        renderMLMRiskResult(
-            data,
-            company
+        document.getElementById(
+            "riskResult"
         );
 
-    } catch (error) {
 
-        console.error(error);
+    /*
+     * ----------------------------------------------------------
+     * BASIC VALUES
+     * ----------------------------------------------------------
+     */
 
-        status.innerHTML =
-            "The company research service could not be reached.";
+    let score =
+        Number(
+            assessment.riskScore
+        );
 
-        result.innerHTML = `
 
-            <div class="danger">
+    if (
+        !Number.isFinite(score)
+    ) {
 
-                <strong>
-                    Something went wrong.
-                </strong>
+        score = 5;
 
-                <p>
-                    ${escapeHTML(error.message)}
-                </p>
-
-                <p>
-                    Please try again in a moment.
-                </p>
-
-            </div>
-
-        `;
     }
-}
 
 
-/* ============================================================
-   DISPLAY RISK RESULT
-   ============================================================ */
+    /*
+     * Keep score between 0 and 10
+     */
 
-function renderMLMRiskResult(data, company) {
+    score =
+        Math.max(
+            0,
+            Math.min(
+                10,
+                score
+            )
+        );
 
-    const result =
-        document.getElementById("riskResult");
-
-    const score =
-        Number(data.riskScore ?? 0);
 
     const level =
-        data.riskLevel ||
-        "Unknown";
+        assessment.riskLevel ||
+        "Moderate";
 
-    const recommendation =
-        data.recommendation ||
-        "Insufficient information.";
 
     const summary =
-        data.summary ||
+        assessment.summary ||
         "No summary was returned.";
+
+
+    const recommendation =
+        assessment.recommendation ||
+        "Conduct further independent research before making a decision.";
+
+
+    const confidence =
+        assessment.confidence ||
+        "Not specified";
+
+
+    const businessModel =
+        assessment.businessModel ||
+        "Insufficient information.";
+
+
+    /*
+     * ----------------------------------------------------------
+     * FLAGS
+     * ----------------------------------------------------------
+     */
+
+    const redFlags =
+        Array.isArray(
+            assessment.redFlags
+        )
+            ? assessment.redFlags
+            : [];
+
+
+    const yellowFlags =
+        Array.isArray(
+            assessment.yellowFlags
+        )
+            ? assessment.yellowFlags
+            : [];
+
+
+    const greenFlags =
+        Array.isArray(
+            assessment.greenFlags
+        )
+            ? assessment.greenFlags
+            : [];
+
+
+    const questions =
+        Array.isArray(
+            assessment.questionsToAskBeforeJoining
+        )
+            ? assessment.questionsToAskBeforeJoining
+            : [];
+
+
+    const evidence =
+        Array.isArray(
+            assessment.evidenceNotes
+        )
+            ? assessment.evidenceNotes
+            : [];
+
+
+    /*
+     * ----------------------------------------------------------
+     * RISK CLASS
+     * ----------------------------------------------------------
+     */
 
     let riskClass =
         "risk-yellow";
 
+
     if (
-        level.toLowerCase() === "low" ||
-        level.toLowerCase() === "green"
+        score <= 3
     ) {
 
         riskClass =
             "risk-green";
 
-    } else if (
-        level.toLowerCase() === "high" ||
-        level.toLowerCase() === "red"
+    }
+    else if (
+        score >= 7
     ) {
 
         riskClass =
             "risk-red";
+
     }
 
 
-    let redFlagsHTML = "";
+    /*
+     * ----------------------------------------------------------
+     * LIST RENDERER
+     * ----------------------------------------------------------
+     */
 
-    if (
-        Array.isArray(data.redFlags) &&
-        data.redFlags.length
+    function renderList(
+        items,
+        emptyText
     ) {
 
-        redFlagsHTML = `
+        if (
+            !items.length
+        ) {
 
-            <div class="risk-card">
+            return `
 
-                <h3>
-                    🚩 Potential Red Flags
-                </h3>
+                <p>
+                    ${escapeHTML(
+                        emptyText
+                    )}
+                </p>
 
-                <ul class="risk-list">
+            `;
 
-                    ${data.redFlags.map(
-                        flag =>
-                            `<li>${escapeHTML(flag)}</li>`
-                    ).join("")}
+        }
 
-                </ul>
 
-            </div>
+        return `
+
+            <ul class="risk-list">
+
+                ${items.map(
+
+                    function(item) {
+
+                        return `
+
+                            <li>
+                                ${escapeHTML(
+                                    item
+                                )}
+                            </li>
+
+                        `;
+
+                    }
+
+                ).join("")}
+
+            </ul>
+
         `;
+
     }
 
 
-    let greenFlagsHTML = "";
-
-    if (
-        Array.isArray(data.greenFlags) &&
-        data.greenFlags.length
-    ) {
-
-        greenFlagsHTML = `
-
-            <div class="risk-card">
-
-                <h3>
-                    🟢 Positive Indicators
-                </h3>
-
-                <ul class="risk-list">
-
-                    ${data.greenFlags.map(
-                        flag =>
-                            `<li>${escapeHTML(flag)}</li>`
-                    ).join("")}
-
-                </ul>
-
-            </div>
-        `;
-    }
-
+    /*
+     * ----------------------------------------------------------
+     * SOURCES
+     * ----------------------------------------------------------
+     */
 
     let sourcesHTML = "";
 
+
     if (
-        Array.isArray(data.sources) &&
-        data.sources.length
+        Array.isArray(sources) &&
+        sources.length > 0
     ) {
 
         sourcesHTML = `
@@ -2260,50 +590,262 @@ function renderMLMRiskResult(data, company) {
             <div class="risk-card">
 
                 <h3>
-                    Research Sources
+                    🔎 Research Sources
                 </h3>
 
-                ${data.sources.map(source => {
+                <p>
 
-                    if (!source.uri) {
-                        return "";
+                    These sources are presented as
+                    research material. A source does not
+                    automatically prove that a claim is true.
+
+                </p>
+
+                ${sources.map(
+
+                    function(source) {
+
+                        if (
+                            !source ||
+                            !source.uri
+                        ) {
+
+                            return "";
+
+                        }
+
+
+                        return `
+
+                            <a
+                                class="risk-source"
+                                href="${escapeAttribute(
+                                    source.uri
+                                )}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                ${escapeHTML(
+                                    source.title ||
+                                    source.uri
+                                )}
+                            </a>
+
+                        `;
+
                     }
 
-                    return `
-                        <a
-                            class="risk-source"
-                            href="${escapeAttribute(source.uri)}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            ${escapeHTML(
-                                source.title ||
-                                source.uri
-                            )}
-                        </a>
-                    `;
-
-                }).join("")}
+                ).join("")}
 
             </div>
+
         `;
+
+    }
+    else {
+
+        sourcesHTML = `
+
+            <div class="risk-card">
+
+                <h3>
+                    🔎 Research Sources
+                </h3>
+
+                <p>
+                    No public sources were returned
+                    by the research service.
+                </p>
+
+                <p>
+
+                    This does NOT mean the company is
+                    safe. It means the system did not
+                    receive usable source links.
+
+                </p>
+
+            </div>
+
+        `;
+
     }
 
+
+    /*
+     * ----------------------------------------------------------
+     * RED FLAGS
+     * ----------------------------------------------------------
+     */
+
+    const redFlagsHTML = `
+
+        <div class="risk-card risk-red">
+
+            <h3>
+                🔴 Potential Red Flags
+            </h3>
+
+            ${renderList(
+
+                redFlags,
+
+                "No specific red flags were identified from the available assessment."
+
+            )}
+
+        </div>
+
+    `;
+
+
+    /*
+     * ----------------------------------------------------------
+     * YELLOW FLAGS
+     * ----------------------------------------------------------
+     */
+
+    const yellowFlagsHTML = `
+
+        <div class="risk-card risk-yellow">
+
+            <h3>
+                🟡 Areas Requiring Further Investigation
+            </h3>
+
+            ${renderList(
+
+                yellowFlags,
+
+                "No specific unresolved concerns were identified."
+
+            )}
+
+        </div>
+
+    `;
+
+
+    /*
+     * ----------------------------------------------------------
+     * GREEN FLAGS
+     * ----------------------------------------------------------
+     */
+
+    const greenFlagsHTML = `
+
+        <div class="risk-card risk-green">
+
+            <h3>
+                🟢 Positive Indicators
+            </h3>
+
+            ${renderList(
+
+                greenFlags,
+
+                "No clear positive indicators were identified."
+
+            )}
+
+        </div>
+
+    `;
+
+
+    /*
+     * ----------------------------------------------------------
+     * QUESTIONS
+     * ----------------------------------------------------------
+     */
+
+    const questionsHTML = `
+
+        <div class="risk-card">
+
+            <h3>
+                ❓ Questions to Ask Before Joining
+            </h3>
+
+            ${renderList(
+
+                questions,
+
+                "Ask for the compensation plan, income disclosure, joining costs, refund policy and evidence of genuine retail demand."
+
+            )}
+
+        </div>
+
+    `;
+
+
+    /*
+     * ----------------------------------------------------------
+     * EVIDENCE
+     * ----------------------------------------------------------
+     */
+
+    const evidenceHTML = `
+
+        <div class="risk-card">
+
+            <h3>
+                📋 Evidence & Assessment Notes
+            </h3>
+
+            ${renderList(
+
+                evidence,
+
+                "No additional evidence notes were returned."
+
+            )}
+
+        </div>
+
+    `;
+
+
+    /*
+     * ----------------------------------------------------------
+     * FINAL HTML
+     * ----------------------------------------------------------
+     */
 
     result.innerHTML = `
 
         <div class="risk-box ${riskClass}">
+
+            <!-- SCORE -->
 
             <div class="risk-score">
 
                 <div>
 
                     <div class="risk-number">
-                        ${score}/10
+
+                        ${score.toFixed(1)}/10
+
                     </div>
 
+                </div>
+
+
+                <div>
+
                     <div class="risk-label">
-                        ${escapeHTML(level)} Risk
+
+                        ${escapeHTML(
+                            level
+                        )} Risk
+
+                    </div>
+
+                    <div>
+
+                        Preliminary assessment
+
                     </div>
 
                 </div>
@@ -2311,41 +853,118 @@ function renderMLMRiskResult(data, company) {
             </div>
 
 
+            <!-- COMPANY -->
+
             <div class="risk-card">
 
                 <h3>
-                    ${escapeHTML(company)}
+                    ${escapeHTML(
+                        company
+                    )}
                 </h3>
 
                 <p>
-                    ${escapeHTML(summary)}
+                    ${escapeHTML(
+                        summary
+                    )}
                 </p>
 
+            </div>
+
+
+            <!-- RECOMMENDATION -->
+
+            <div class="risk-card">
+
+                <h3>
+                    🎯 Recommendation
+                </h3>
+
                 <div class="recommendation">
-                    Recommendation:
-                    ${escapeHTML(recommendation)}
+
+                    ${escapeHTML(
+                        recommendation
+                    )}
+
                 </div>
+
+            </div>
+
+
+            <!-- BUSINESS MODEL -->
+
+            <div class="risk-card">
+
+                <h3>
+                    🏢 Business Model
+                </h3>
+
+                <p>
+                    ${escapeHTML(
+                        businessModel
+                    )}
+                </p>
+
+                <p>
+
+                    <strong>
+                        Assessment confidence:
+                    </strong>
+
+                    ${escapeHTML(
+                        confidence
+                    )}
+
+                </p>
 
             </div>
 
 
             ${redFlagsHTML}
 
+            ${yellowFlagsHTML}
+
             ${greenFlagsHTML}
+
+            ${questionsHTML}
+
+            ${evidenceHTML}
 
             ${sourcesHTML}
 
 
+            <!-- DISCLAIMER -->
+
             <div class="risk-card">
 
                 <p>
-                    <strong>Important:</strong>
-                    This assessment is educational and is not
-                    financial, legal or investment advice.
-                    A risk score is an indication based on the
-                    information available to the system and should
-                    not be treated as proof that a company is
-                    legitimate or fraudulent.
+
+                    <strong>
+                        ⚠️ Important:
+                    </strong>
+
+                </p>
+
+                <p>
+
+                    This assessment is for educational
+                    and public-awareness purposes.
+
+                    A risk score is an indication based
+                    on the information available to the
+                    system. It is not proof that a company
+                    is legitimate, fraudulent, a pyramid
+                    scheme or a Ponzi scheme.
+
+                </p>
+
+                <p>
+
+                    Always verify important claims using
+                    independent evidence, official company
+                    documents and relevant regulatory or
+                    government sources.
+
                 </p>
 
             </div>
@@ -2353,12 +972,5 @@ function renderMLMRiskResult(data, company) {
         </div>
 
     `;
+
 }
-
-
-
-    
-</script>
-
-</body>
-</html>
