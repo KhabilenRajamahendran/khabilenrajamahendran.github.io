@@ -1,2812 +1,1800 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="MLM Awareness - educational resources, recruitment mathematics, scam awareness and MLM company risk assessment."
-    >
-
-    <title>
-        MLM Awareness | Khabilen
-    </title>
-
-
-    <style>
-
-        /* =========================================================
-           GLOBAL
-           ========================================================= */
-
-        * {
-            box-sizing: border-box;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-        body {
-
-            margin: 0;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            background:
-                #061425;
-
-            color:
-                #e8f1ff;
-
-            line-height:
-                1.7;
-        }
-
-
-        a {
-
-            color:
-                #29c7ff;
-
-            text-decoration:
-                none;
-        }
-
-
-        a:hover {
-
-            text-decoration:
-                underline;
-        }
-
-
-        .container {
-
-            width:
-                min(1100px, 92%);
-
-            margin:
-                0 auto;
-        }
-
-
-        section {
-
-            padding:
-                70px 0;
-        }
-
-
-        h1,
-        h2,
-        h3 {
-
-            line-height:
-                1.25;
-        }
-
-
-        h1 {
-
-            font-size:
-                clamp(2.2rem, 5vw, 4rem);
-
-            margin-bottom:
-                20px;
-        }
-
-
-        h2 {
-
-            font-size:
-                clamp(1.8rem, 4vw, 2.7rem);
-        }
-
-
-        p {
-
-            color:
-                #b9d2ef;
-        }
-
-
-        /* =========================================================
-           NAVIGATION
-           ========================================================= */
-
-        nav {
-
-            position:
-                sticky;
-
-            top:
-                0;
-
-            z-index:
-                1000;
-
-            background:
-                rgba(4, 17, 32, 0.96);
-
-            border-bottom:
-                1px solid #1d405d;
-
-            backdrop-filter:
-                blur(10px);
-        }
-
-
-        .nav-inner {
-
-            min-height:
-                72px;
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            justify-content:
-                space-between;
-
-            gap:
-                20px;
-        }
-
-
-        .logo {
-
-            font-size:
-                1.35rem;
-
-            font-weight:
-                800;
-
-            color:
-                white;
-        }
-
-
-        .logo span {
-
-            color:
-                #28c8ff;
-        }
-
-
-        .nav-links {
-
-            display:
-                flex;
-
-            flex-wrap:
-                wrap;
-
-            gap:
-                18px;
-
-            justify-content:
-                flex-end;
-        }
-
-
-        .nav-links a {
-
-            font-size:
-                0.92rem;
-
-            color:
-                #b8cee6;
-        }
-
-
-        .nav-links a:hover {
-
-            color:
-                #29c7ff;
-
-            text-decoration:
-                none;
-        }
-
-
-        /* =========================================================
-           HERO
-           ========================================================= */
-
-        .hero {
-
-            min-height:
-                600px;
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            background:
-                radial-gradient(
-                    circle at top right,
-                    rgba(35, 190, 255, 0.13),
-                    transparent 35%
-                ),
-                #061425;
-        }
-
-
-        .eyebrow {
-
-            color:
-                #20c9ff;
-
-            font-size:
-                0.8rem;
-
-            font-weight:
-                800;
-
-            letter-spacing:
-                2px;
-
-            text-transform:
-                uppercase;
-        }
-
-
-        .hero p {
-
-            max-width:
-                800px;
-
-            font-size:
-                1.15rem;
-        }
-
-
-        .hero-buttons {
-
-            display:
-                flex;
-
-            flex-wrap:
-                wrap;
-
-            gap:
-                12px;
-
-            margin-top:
-                30px;
-        }
-
-
-        .button {
-
-            display:
-                inline-block;
-
-            padding:
-                13px 22px;
-
-            border-radius:
-                8px;
-
-            background:
-                #20c4f4;
-
-            color:
-                #04111e;
-
-            font-weight:
-                800;
-
-            border:
-                none;
-
-            cursor:
-                pointer;
-        }
-
-
-        .button:hover {
-
-            text-decoration:
-                none;
-
-            transform:
-                translateY(-1px);
-        }
-
-
-        .button.secondary {
-
-            background:
-                transparent;
-
-            color:
-                #d8ebff;
-
-            border:
-                1px solid #2c526f;
-        }
-
-
-        /* =========================================================
-           CARDS
-           ========================================================= */
-
-        .grid {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                repeat(auto-fit, minmax(250px, 1fr));
-
-            gap:
-                20px;
-        }
-
-
-        .card {
-
-            background:
-                #0a1b2e;
-
-            border:
-                1px solid #21445f;
-
-            border-radius:
-                14px;
-
-            padding:
-                25px;
-        }
-
-
-        .card h3 {
-
-            margin-top:
-                0;
-        }
-
-
-        .card p {
-
-            margin-bottom:
-                0;
-        }
-
-
-        /* =========================================================
-           SECTION HEADERS
-           ========================================================= */
-
-        .section-header {
-
-            max-width:
-                800px;
-
-            margin-bottom:
-                35px;
-        }
-
-
-        .section-header p {
-
-            font-size:
-                1.05rem;
-        }
-
-
-        /* =========================================================
-           CALCULATOR
-           ========================================================= */
-
-        .calculator-box {
-
-            background:
-                #091a2d;
-
-            border:
-                1px solid #244b68;
-
-            border-radius:
-                16px;
-
-            padding:
-                30px;
-        }
-
-
-        label {
-
-            display:
-                block;
-
-            margin-bottom:
-                8px;
-
-            font-weight:
-                700;
-        }
-
-
-        input,
-        textarea,
-        select {
-
-            width:
-                100%;
-
-            padding:
-                14px;
-
-            border:
-                1px solid #29516e;
-
-            border-radius:
-                8px;
-
-            background:
-                #051322;
-
-            color:
-                #f2f8ff;
-
-            font-size:
-                1rem;
-
-            outline:
-                none;
-        }
-
-
-        input:focus,
-        textarea:focus,
-        select:focus {
-
-            border-color:
-                #29c7ff;
-
-            box-shadow:
-                0 0 0 2px rgba(41, 199, 255, 0.12);
-        }
-
-
-        .form-group {
-
-            margin-bottom:
-                18px;
-        }
-
-
-        .calculation-result {
-
-            margin-top:
-                25px;
-
-            padding:
-                20px;
-
-            border:
-                1px solid #28506d;
-
-            border-radius:
-                10px;
-
-            background:
-                #061526;
-        }
-
-
-        /* =========================================================
-           RISK ASSESSMENT
-           ========================================================= */
-
-        .risk-section {
-
-            background:
-                linear-gradient(
-                    180deg,
-                    #07192b,
-                    #061425
-                );
-        }
-
-
-        .risk-intro {
-
-            max-width:
-                850px;
-        }
-
-
-        .risk-box {
-
-            margin-top:
-                30px;
-
-            background:
-                #0a1b2e;
-
-            border:
-                1px solid #28516e;
-
-            border-radius:
-                16px;
-
-            padding:
-                30px;
-
-            box-shadow:
-                0 20px 50px rgba(0,0,0,0.18);
-        }
-
-
-        .risk-input-row {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                1fr auto;
-
-            gap:
-                12px;
-
-            align-items:
-                end;
-        }
-
-
-        .risk-input-row .form-group {
-
-            margin:
-                0;
-        }
-
-
-        @media (max-width: 700px) {
-
-            .risk-input-row {
-
-                grid-template-columns:
-                    1fr;
-            }
-
-        }
-
-
-        #riskStatus {
-
-            margin-top:
-                20px;
-
-            color:
-                #8fc8ee;
-        }
-
-
-        #riskResult {
-
-            margin-top:
-                25px;
-        }
-
-
-        .risk-card {
-
-            border:
-                1px solid #345873;
-
-            border-radius:
-                14px;
-
-            padding:
-                28px;
-
-            background:
-                #07192a;
-        }
-
-
-        .risk-red {
-
-            border-color:
-                #ff6677;
-
-            box-shadow:
-                0 0 30px rgba(255, 102, 119, 0.08);
-        }
-
-
-        .risk-yellow {
-
-            border-color:
-                #e8b84c;
-
-            box-shadow:
-                0 0 30px rgba(232, 184, 76, 0.06);
-        }
-
-
-        .risk-green {
-
-            border-color:
-                #41d99b;
-
-            box-shadow:
-                0 0 30px rgba(65, 217, 155, 0.06);
-        }
-
-
-        .risk-score {
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            gap:
-                20px;
-
-            margin:
-                25px 0;
-
-            padding:
-                22px;
-
-            border-radius:
-                12px;
-
-            background:
-                #051322;
-        }
-
-
-        .score-number {
-
-            font-size:
-                3.5rem;
-
-            font-weight:
-                900;
-
-            line-height:
-                1;
-        }
-
-
-        .score-label {
-
-            font-size:
-                1.2rem;
-
-            font-weight:
-                800;
-        }
-
-
-        .risk-summary,
-        .recommendation,
-        .flag-section,
-        .sources {
-
-            margin-top:
-                25px;
-
-            padding:
-                20px;
-
-            border-radius:
-                10px;
-
-            background:
-                rgba(255,255,255,0.025);
-        }
-
-
-        .risk-summary h3,
-        .recommendation h3,
-        .flag-section h3,
-        .sources h3 {
-
-            margin-top:
-                0;
-        }
-
-
-        .flag-section ul {
-
-            padding-left:
-                25px;
-        }
-
-
-        .flag-section li {
-
-            margin-bottom:
-                8px;
-
-            color:
-                #c4d9ee;
-        }
-
-
-        .researching {
-
-            padding:
-                25px;
-
-            border:
-                1px solid #28516e;
-
-            border-radius:
-                12px;
-
-            background:
-                #061526;
-        }
-
-
-        .danger {
-
-            padding:
-                25px;
-
-            border-left:
-                4px solid #ff6677;
-
-            border-top:
-                1px solid rgba(255,102,119,0.3);
-
-            border-right:
-                1px solid rgba(255,102,119,0.3);
-
-            border-bottom:
-                1px solid rgba(255,102,119,0.3);
-
-            border-radius:
-                10px;
-
-            background:
-                rgba(255,102,119,0.06);
-        }
-
-
-        .source {
-
-            display:
-                block;
-
-            padding:
-                10px 0;
-
-            border-bottom:
-                1px solid #203e56;
-        }
-
-
-        /* =========================================================
-           DISCUSSION
-           ========================================================= */
-
-        .discussion-box {
-
-            background:
-                #0a1b2e;
-
-            border:
-                1px solid #214760;
-
-            border-radius:
-                16px;
-
-            padding:
-                30px;
-        }
-
-
-        .discussion-status {
-
-            margin-top:
-                18px;
-
-            color:
-                #8fc8ee;
-        }
-
-
-        .ai-answer {
-
-            margin-top:
-                25px;
-
-            padding:
-                25px;
-
-            border:
-                1px solid #27506d;
-
-            border-radius:
-                12px;
-
-            background:
-                #07182a;
-        }
-
-
-        .ai-answer p {
-
-            white-space:
-                normal;
-        }
-
-
-        /* =========================================================
-           DISCLAIMER
-           ========================================================= */
-
-        .notice {
-
-            padding:
-                22px;
-
-            border-left:
-                4px solid #25c8ff;
-
-            border-top:
-                1px solid #204a66;
-
-            border-right:
-                1px solid #204a66;
-
-            border-bottom:
-                1px solid #204a66;
-
-            border-radius:
-                8px;
-
-            background:
-                #081b2e;
-        }
-
-
-        /* =========================================================
-           FOOTER
-           ========================================================= */
-
-        footer {
-
-            padding:
-                40px 0;
-
-            border-top:
-                1px solid #1d405d;
-
-            color:
-                #8caac5;
-
-            text-align:
-                center;
-        }
-
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MLM Awareness AI</title>
+
+  <meta
+    name="description"
+    content="MLM Awareness AI helps users understand MLM structures, recruitment mathematics, red flags and company risk indicators."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #061525;
+      color: #e8f1ff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #55cfff;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    header {
+      padding: 70px 0 45px;
+    }
+
+    .eyebrow {
+      color: #16d5ff;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 1.05;
+      margin: 0 0 25px;
+      color: #ffffff;
+    }
+
+    .hero-text {
+      max-width: 900px;
+      font-size: 18px;
+      color: #9fc1e7;
+    }
+
+    /* =========================
+       CARDS
+       ========================= */
+
+    .card {
+      background: #0a1c2e;
+      border: 1px solid #24425d;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #ffffff;
+      font-size: 28px;
+    }
+
+    .card h3 {
+      color: #ffffff;
+    }
+
+    .section-label {
+      color: #16d5ff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    /* =========================
+       FORM
+       ========================= */
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 9px;
+      color: #ffffff;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      display: block;
+      background: #061525;
+      border: 1px solid #31516d;
+      border-radius: 10px;
+      color: #ffffff;
+      font-size: 16px;
+      padding: 15px 16px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #20cfff;
+      box-shadow: 0 0 0 3px rgba(32, 207, 255, 0.12);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .input-help {
+      color: #88a7c7;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 10px;
+      padding: 14px 22px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      background: #20c5f5;
+      color: #03111e;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+    }
+
+    button:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .button-row {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .secondary-button {
+      background: #17344e;
+      color: #d9edff;
+      border: 1px solid #31516d;
+    }
+
+    /* =========================
+       STATUS
+       ========================= */
+
+    .status {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      display: none;
+      background: #0b263c;
+      border: 1px solid #31516d;
+    }
+
+    .status.show {
+      display: block;
+    }
+
+    .status.error {
+      border-color: #ff6178;
+      color: #ffb8c2;
+    }
+
+    .status.success {
+      border-color: #35d89b;
+      color: #9df0cb;
+    }
+
+    /* =========================
+       RISK RESULT
+       ========================= */
+
+    #riskResult {
+      display: none;
+      margin-top: 30px;
+    }
+
+    #riskResult.show {
+      display: block;
+    }
+
+    .risk-summary {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+
+    .score-box {
+      background: #071726;
+      border: 1px solid #31516d;
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .score-number {
+      font-size: 70px;
+      font-weight: 900;
+      line-height: 1;
+      margin: 10px 0;
+    }
+
+    .score-label {
+      color: #88a7c7;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .risk-badge {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .risk-green {
+      background: rgba(42, 215, 145, 0.15);
+      border: 1px solid #2ad791;
+      color: #69edb0;
+    }
+
+    .risk-yellow {
+      background: rgba(255, 190, 45, 0.15);
+      border: 1px solid #ffbe2d;
+      color: #ffd66b;
+    }
+
+    .risk-red {
+      background: rgba(255, 78, 102, 0.15);
+      border: 1px solid #ff4e66;
+      color: #ff9baa;
+    }
+
+    .summary-box {
+      background: #071726;
+      border: 1px solid #31516d;
+      border-radius: 16px;
+      padding: 25px;
+    }
+
+    .summary-box h3 {
+      margin-top: 0;
+    }
+
+    .recommendation {
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: 15px;
+    }
+
+    /* =========================
+       RESULT SECTIONS
+       ========================= */
+
+    .result-section {
+      margin-top: 25px;
+      padding: 24px;
+      border-radius: 14px;
+      background: #071726;
+      border: 1px solid #24425d;
+    }
+
+    .result-section h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .result-section ul {
+      padding-left: 23px;
+      margin-bottom: 0;
+    }
+
+    .result-section li {
+      margin-bottom: 8px;
+    }
+
+    .red-section {
+      border-left: 4px solid #ff4e66;
+    }
+
+    .yellow-section {
+      border-left: 4px solid #ffbe2d;
+    }
+
+    .green-section {
+      border-left: 4px solid #2ad791;
+    }
+
+    .question-section {
+      border-left: 4px solid #20c5f5;
+    }
+
+    .source-item {
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #1c344a;
+    }
+
+    .source-item:last-child {
+      border-bottom: 0;
+    }
+
+    /* =========================
+       DISCUSSION
+       ========================= */
+
+    .discussion {
+      margin-top: 60px;
+    }
+
+    .discussion h2 {
+      font-size: 42px;
+      margin: 0 0 18px;
+    }
+
+    .discussion-intro {
+      color: #9fc1e7;
+      font-size: 17px;
+      max-width: 900px;
+      margin-bottom: 25px;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      margin-top: 70px;
+      border-top: 1px solid #24425d;
+      padding: 35px 0;
+      color: #7895b3;
+      font-size: 14px;
+    }
+
+    .rules {
+      border: 1px solid #24506a;
+      border-left: 4px solid #20c5f5;
+      padding: 20px;
+      border-radius: 10px;
+      color: #b5cce3;
+      margin-top: 30px;
+    }
+
+    /* =========================
+       LOADING
+       ========================= */
+
+    .loading {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #31516d;
+      border-top-color: #20c5f5;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* =========================
+       RESPONSIVE
+       ========================= */
+
+    @media (max-width: 750px) {
+
+      header {
+        padding-top: 45px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .risk-summary {
+        grid-template-columns: 1fr;
+      }
+
+      .score-number {
+        font-size: 58px;
+      }
+
+      .discussion h2 {
+        font-size: 34px;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <main class="container">
 
-    <!-- =========================================================
-         NAVIGATION
-         ========================================================= -->
-
-    <nav>
-
-        <div class="container nav-inner">
-
-            <div class="logo">
-                Khabilen<span>.</span>
-            </div>
-
-
-            <div class="nav-links">
-
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#cybersecurity">
-                    Cybersecurity
-                </a>
-
-                <a href="#scam-awareness">
-                    Scam Awareness
-                </a>
-
-                <a href="#mlm-awareness">
-                    MLM Awareness
-                </a>
-
-                <a href="#risk-assessment">
-                    Risk Assessment
-                </a>
-
-                <a href="#discussion">
-                    Ask AI
-                </a>
-
-            </div>
-
-        </div>
-
-    </nav>
-
-
-
-    <!-- =========================================================
+    <!-- ==========================================
          HERO
-         ========================================================= -->
+         ========================================== -->
 
-    <section class="hero">
+    <header>
 
-        <div class="container">
+      <div class="eyebrow">
+        MLM AWARENESS AI
+      </div>
 
-            <div class="eyebrow">
-                MLM & SCAM AWARENESS
+      <h1>
+        Understand the opportunity<br>
+        before you join.
+      </h1>
+
+      <p class="hero-text">
+        Learn how multi-level marketing structures work, understand
+        recruitment mathematics, identify potential red flags and
+        evaluate an MLM company before making a decision.
+      </p>
+
+    </header>
+
+
+    <!-- ==========================================
+         COMPANY RISK ASSESSMENT
+         ========================================== -->
+
+    <section class="card" id="assessment">
+
+      <div class="section-label">
+        Company Risk Assessment
+      </div>
+
+      <h2>
+        Is this MLM opportunity worth the risk?
+      </h2>
+
+      <p>
+        Enter the name of an MLM company. The AI will analyse the
+        information available to it and produce an educational
+        risk assessment.
+      </p>
+
+      <label for="companyName">
+        MLM Company Name
+      </label>
+
+      <input
+        id="companyName"
+        type="text"
+        placeholder="Example: ABC Network"
+        autocomplete="off"
+      >
+
+      <div class="input-help">
+        Enter the company name only. Do not enter passwords,
+        bank details, phone numbers or private information.
+      </div>
+
+      <div class="button-row">
+
+        <button
+          id="assessButton"
+          type="button"
+        >
+          Assess Company Risk
+        </button>
+
+        <button
+          id="clearButton"
+          type="button"
+          class="secondary-button"
+        >
+          Clear
+        </button>
+
+      </div>
+
+      <div
+        id="assessmentStatus"
+        class="status"
+        role="status"
+        aria-live="polite"
+      ></div>
+
+
+      <!-- ========================================
+           RISK RESULT
+           ======================================== -->
+
+      <div id="riskResult">
+
+        <div class="risk-summary">
+
+          <div class="score-box">
+
+            <div class="score-label">
+              Risk Score
             </div>
 
+            <div
+              id="scoreNumber"
+              class="score-number"
+            >
+              --
+            </div>
 
-            <h1>
-                Think Before<br>
-                You Join.
-            </h1>
+            <div class="score-label">
+              out of 10
+            </div>
 
+            <div style="margin-top:18px;">
+              <span
+                id="riskBadge"
+                class="risk-badge"
+              >
+                --
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="summary-box">
+
+            <h3 id="resultCompany">
+              Company Assessment
+            </h3>
 
             <p>
-                An educational platform for understanding
-                multi-level marketing, recruitment mathematics,
-                pyramid structures, scams, psychological pressure
-                and the warning signs that deserve closer attention.
+              <strong>Business Model:</strong>
+              <span id="businessModel">
+                Not specified
+              </span>
             </p>
 
+            <p>
+              <strong>Confidence:</strong>
+              <span id="confidence">
+                Not specified
+              </span>
+            </p>
 
-            <div class="hero-buttons">
-
-                <a
-                    class="button"
-                    href="#risk-assessment"
-                >
-                    Check an MLM Company
-                </a>
-
-
-                <a
-                    class="button secondary"
-                    href="#discussion"
-                >
-                    Ask the AI
-                </a>
-
+            <div
+              id="summary"
+            >
+              No assessment available.
             </div>
 
+            <div
+              id="recommendation"
+              class="recommendation"
+            ></div>
+
+          </div>
+
         </div>
+
+
+        <!-- RED FLAGS -->
+
+        <div class="result-section red-section">
+
+          <h3>
+            🔴 Potential Red Flags
+          </h3>
+
+          <div id="redFlags"></div>
+
+        </div>
+
+
+        <!-- YELLOW FLAGS -->
+
+        <div class="result-section yellow-section">
+
+          <h3>
+            🟡 Areas Requiring Further Investigation
+          </h3>
+
+          <div id="yellowFlags"></div>
+
+        </div>
+
+
+        <!-- GREEN FLAGS -->
+
+        <div class="result-section green-section">
+
+          <h3>
+            🟢 Positive Indicators
+          </h3>
+
+          <div id="greenFlags"></div>
+
+        </div>
+
+
+        <!-- QUESTIONS -->
+
+        <div class="result-section question-section">
+
+          <h3>
+            ❓ Questions to Ask Before Joining
+          </h3>
+
+          <div id="questions"></div>
+
+        </div>
+
+
+        <!-- EVIDENCE -->
+
+        <div class="result-section">
+
+          <h3>
+            🔎 Evidence / Research Notes
+          </h3>
+
+          <div id="evidence"></div>
+
+        </div>
+
+
+        <!-- SOURCES -->
+
+        <div class="result-section">
+
+          <h3>
+            🔗 Research Sources
+          </h3>
+
+          <div id="sources"></div>
+
+        </div>
+
+      </div>
 
     </section>
 
 
-
-    <!-- =========================================================
-         ABOUT
-         ========================================================= -->
-
-    <section id="about">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="eyebrow">
-                    ABOUT
-                </div>
-
-                <h2>
-                    Education before commitment.
-                </h2>
-
-                <p>
-                    The purpose of this platform is to help people
-                    understand business opportunities before committing
-                    money, time or relationships.
-                </p>
-
-            </div>
-
-
-            <div class="grid">
-
-                <div class="card">
-
-                    <h3>
-                        Understand the Model
-                    </h3>
-
-                    <p>
-                        Learn how MLM structures,
-                        direct selling and recruitment-based
-                        compensation plans work.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Identify Red Flags
-                    </h3>
-
-                    <p>
-                        Learn to recognise pressure,
-                        unrealistic income claims,
-                        recruitment dependency and other warning signs.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Make Your Own Decision
-                    </h3>
-
-                    <p>
-                        The platform provides educational information
-                        so that users can conduct their own due diligence.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         CYBERSECURITY
-         ========================================================= -->
-
-    <section id="cybersecurity">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="eyebrow">
-                    CYBERSECURITY
-                </div>
-
-                <h2>
-                    Think like an investigator.
-                </h2>
-
-                <p>
-                    Online opportunities should be evaluated with
-                    the same mindset used when assessing digital risks:
-                    verify information, identify inconsistencies and
-                    avoid trusting claims without evidence.
-                </p>
-
-            </div>
-
-
-            <div class="grid">
-
-                <div class="card">
-
-                    <h3>
-                        Verify
-                    </h3>
-
-                    <p>
-                        Check the company, registration,
-                        products, compensation plan and public information.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Question
-                    </h3>
-
-                    <p>
-                        Ask where the money actually comes from
-                        and who ultimately pays the participants.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Evidence
-                    </h3>
-
-                    <p>
-                        Separate documented evidence from testimonials,
-                        screenshots and claims made during recruitment.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         SCAM AWARENESS
-         ========================================================= -->
-
-    <section id="scam-awareness">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="eyebrow">
-                    SCAM AWARENESS
-                </div>
-
-                <h2>
-                    Common warning signs.
-                </h2>
-
-            </div>
-
-
-            <div class="grid">
-
-                <div class="card">
-
-                    <h3>
-                        🚩 Unrealistic Income
-                    </h3>
-
-                    <p>
-                        Claims that ordinary people can quickly
-                        make extremely large amounts of money.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        🚩 Recruitment Pressure
-                    </h3>
-
-                    <p>
-                        Pressure to recruit friends, family or
-                        colleagues rather than focusing on genuine customers.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        🚩 Urgency
-                    </h3>
-
-                    <p>
-                        Statements such as "join today",
-                        "this opportunity will disappear"
-                        or "don't miss your chance."
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        🚩 Discouraging Questions
-                    </h3>
-
-                    <p>
-                        Criticism is dismissed as negativity
-                        rather than being addressed with evidence.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         MLM AWARENESS
-         ========================================================= -->
-
-    <section id="mlm-awareness">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="eyebrow">
-                    MLM AWARENESS
-                </div>
-
-                <h2>
-                    MLM is not automatically a Ponzi scheme.
-                </h2>
-
-                <p>
-                    Multi-Level Marketing generally involves selling
-                    products or services through a network of participants.
-                    However, individual companies must be evaluated based
-                    on how their actual business and compensation structures work.
-                </p>
-
-            </div>
-
-
-            <div class="grid">
-
-                <div class="card">
-
-                    <h3>
-                        MLM
-                    </h3>
-
-                    <p>
-                        Participants may earn money from product sales
-                        and, depending on the compensation plan,
-                        sales generated by people they recruit.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Pyramid Scheme
-                    </h3>
-
-                    <p>
-                        The central economic activity is recruitment,
-                        with money flowing through new participants
-                        rather than genuine demand for products or services.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Ponzi Scheme
-                    </h3>
-
-                    <p>
-                        Returns to earlier participants are funded
-                        by money from newer participants rather than
-                        genuine investment profits.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         RECRUITMENT MATHEMATICS
-         ========================================================= -->
-
-    <section id="mathematics">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="eyebrow">
-                    RECRUITMENT MATHEMATICS
-                </div>
-
-                <h2>
-                    See how recruitment grows.
-                </h2>
-
-                <p>
-                    Recruitment requirements can grow exponentially.
-                    This calculator demonstrates the mathematical effect
-                    of repeated recruitment.
-                </p>
-
-            </div>
-
-
-            <div class="calculator-box">
-
-                <div class="form-group">
-
-                    <label for="recruitment">
-
-                        New recruits per person
-
-                    </label>
-
-
-                    <input
-                        type="number"
-                        id="recruitment"
-                        value="5"
-                        min="1"
-                        max="100"
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="levels">
-
-                        Number of levels
-
-                    </label>
-
-
-                    <input
-                        type="number"
-                        id="levels"
-                        value="7"
-                        min="1"
-                        max="20"
-                    >
-
-                </div>
-
-
-                <button
-                    class="button"
-                    type="button"
-                    onclick="calculateRecruitment()"
-                >
-                    Calculate
-                </button>
-
-
-                <div
-                    id="calculationResult"
-                    class="calculation-result"
-                ></div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         MLM COMPANY RISK ASSESSMENT
-         ========================================================= -->
+    <!-- ==========================================
+         OPEN DISCUSSION
+         ========================================== -->
 
     <section
-        id="risk-assessment"
-        class="risk-section"
+      class="discussion"
+      id="discussion"
     >
 
-        <div class="container">
+      <div class="eyebrow">
+        OPEN DISCUSSION
+      </div>
 
-            <div class="section-header risk-intro">
+      <h2>
+        Have a question? Ask it.
+      </h2>
 
-                <div class="eyebrow">
-                    MLM COMPANY RISK ASSESSMENT
-                </div>
-
-                <h2>
-                    Check an MLM before you join.
-                </h2>
-
-                <p>
-                    Enter the name of an MLM company and the research
-                    assistant will analyse available information and
-                    identify potential risk indicators.
-                </p>
-
-                <p>
-                    The result is an educational risk assessment,
-                    not a legal determination that a company is
-                    legitimate, fraudulent or illegal.
-                </p>
-
-            </div>
+      <p class="discussion-intro">
+        You can ask questions about MLM structures, recruitment
+        mathematics, compensation plans, pyramid schemes, Ponzi
+        schemes, psychological pressure, red flags or how to
+        research an opportunity.
+      </p>
 
 
-            <div class="risk-box">
+      <div class="card">
 
-                <div class="risk-input-row">
+        <label for="question">
+          Your question
+        </label>
 
-                    <div class="form-group">
+        <textarea
+          id="question"
+          placeholder="Example: If every person recruits 5 people, how quickly does the recruitment structure grow?"
+        ></textarea>
 
-                        <label for="companyName">
+        <div class="button-row">
 
-                            MLM Company Name
-
-                        </label>
-
-
-                        <input
-                            type="text"
-                            id="companyName"
-                            placeholder="Example: ABC Network"
-                            autocomplete="off"
-                        >
-
-                    </div>
-
-
-                    <button
-                        class="button"
-                        type="button"
-                        onclick="assessMLMCompany()"
-                    >
-                        🔎 Assess Company
-                    </button>
-
-                </div>
-
-
-                <div id="riskStatus">
-
-                    Enter an MLM company name to begin.
-
-                </div>
-
-
-                <div id="riskResult"></div>
-
-            </div>
+          <button
+            id="askButton"
+            type="button"
+          >
+            Ask Research Assistant
+          </button>
 
         </div>
+
+        <div
+          id="askStatus"
+          class="status"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+        <div
+          id="answerBox"
+          class="result-section"
+          style="display:none;"
+        >
+
+          <h3>
+            💡 Research Answer
+          </h3>
+
+          <div id="answer"></div>
+
+        </div>
+
+      </div>
 
     </section>
 
 
+    <!-- ==========================================
+         DISCUSSION RULES
+         ========================================== -->
 
-    <!-- =========================================================
-         RED FLAGS
-         ========================================================= -->
+    <div class="rules">
 
-    <section id="red-flags">
+      <strong>
+        Discussion rules:
+      </strong>
 
-        <div class="container">
+      Please do not post private information, bank details,
+      phone numbers, passwords, personal documents or identifying
+      information about other people.
 
-            <div class="section-header">
+      This discussion is intended for education and awareness.
 
-                <div class="eyebrow">
-                    RED FLAGS
-                </div>
+    </div>
 
-                <h2>
-                    Questions worth asking.
-                </h2>
 
-            </div>
+  </main>
 
 
-            <div class="grid">
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
 
-                <div class="card">
+  <footer>
 
-                    <h3>
-                        Where does the money come from?
-                    </h3>
+    <div class="container">
 
-                    <p>
-                        Is revenue primarily generated from genuine
-                        external customers or from participants?
-                    </p>
+      <strong>
+        MLM Awareness AI
+      </strong>
 
-                </div>
+      <br>
 
+      Educational information only.
+      A risk score is not a guarantee that a company is legitimate
+      or fraudulent. Always perform independent research before
+      making financial decisions.
 
-                <div class="card">
+    </div>
 
-                    <h3>
-                        What happens if recruitment stops?
-                    </h3>
+  </footer>
 
-                    <p>
-                        Consider whether the business can remain
-                        financially sustainable without continuously
-                        adding new participants.
-                    </p>
 
-                </div>
+  <!-- ============================================================
+       JAVASCRIPT
+       IMPORTANT:
+       Everything below MUST remain inside this SCRIPT tag.
+       ============================================================ -->
 
+  <script>
 
-                <div class="card">
+    /* ============================================================
+       CLOUDFLARE WORKER
+       ============================================================ */
 
-                    <h3>
-                        Can the product stand alone?
-                    </h3>
+    const WORKER_BASE =
+      "https://mlm-awareness-ai.khabi.workers.dev";
 
-                    <p>
-                        Would people purchase the product at its
-                        normal price without joining the opportunity?
-                    </p>
 
-                </div>
+    const ASK_ENDPOINT =
+      WORKER_BASE + "/ask";
 
 
-                <div class="card">
+    const ASSESS_ENDPOINT =
+      WORKER_BASE + "/assess";
 
-                    <h3>
-                        Are income claims documented?
-                    </h3>
 
-                    <p>
-                        Ask for verifiable income disclosures rather
-                        than relying solely on testimonials.
-                    </p>
+    /* ============================================================
+       PAGE ELEMENTS
+       ============================================================ */
 
-                </div>
+    const companyInput =
+      document.getElementById("companyName");
 
-            </div>
+    const assessButton =
+      document.getElementById("assessButton");
 
-        </div>
+    const clearButton =
+      document.getElementById("clearButton");
 
-    </section>
+    const assessmentStatus =
+      document.getElementById("assessmentStatus");
 
+    const riskResult =
+      document.getElementById("riskResult");
 
+    const scoreNumber =
+      document.getElementById("scoreNumber");
 
-    <!-- =========================================================
-         OPEN DISCUSSION / AI
-         ========================================================= -->
+    const riskBadge =
+      document.getElementById("riskBadge");
 
-    <section id="discussion">
+    const resultCompany =
+      document.getElementById("resultCompany");
 
-        <div class="container">
+    const businessModel =
+      document.getElementById("businessModel");
 
-            <div class="section-header">
+    const confidence =
+      document.getElementById("confidence");
 
-                <div class="eyebrow">
-                    OPEN DISCUSSION
-                </div>
+    const summary =
+      document.getElementById("summary");
 
-                <h2>
-                    Have a question? Ask it.
-                </h2>
+    const recommendation =
+      document.getElementById("recommendation");
 
-                <p>
-                    You can ask questions about MLM structures,
-                    recruitment mathematics, compensation plans,
-                    pyramid schemes, Ponzi schemes, psychological
-                    pressure, red flags or how to research an opportunity.
-                </p>
+    const redFlags =
+      document.getElementById("redFlags");
 
-            </div>
+    const yellowFlags =
+      document.getElementById("yellowFlags");
 
+    const greenFlags =
+      document.getElementById("greenFlags");
 
-            <div class="discussion-box">
+    const questions =
+      document.getElementById("questions");
 
-                <div class="form-group">
+    const evidence =
+      document.getElementById("evidence");
 
-                    <label for="question">
+    const sources =
+      document.getElementById("sources");
 
-                        Your question
 
-                    </label>
+    const questionInput =
+      document.getElementById("question");
 
+    const askButton =
+      document.getElementById("askButton");
 
-                    <textarea
-                        id="question"
-                        rows="6"
-                        placeholder="Example: If an MLM requires me to recruit three people, what happens mathematically after several levels?"
-                    ></textarea>
+    const askStatus =
+      document.getElementById("askStatus");
 
-                </div>
+    const answerBox =
+      document.getElementById("answerBox");
 
+    const answer =
+      document.getElementById("answer");
 
-                <button
-                    class="button"
-                    type="button"
-                    onclick="askAI()"
-                >
-                    Ask Research Assistant
-                </button>
 
+    /* ============================================================
+       HTML ESCAPING
+       ============================================================ */
 
-                <div
-                    id="aiStatus"
-                    class="discussion-status"
-                ></div>
+    function escapeHTML(value) {
 
+      if (value === null || value === undefined) {
+        return "";
+      }
 
-                <div
-                    id="aiAnswer"
-                    class="ai-answer"
-                ></div>
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 
+    }
 
-                <div
-                    id="aiSources"
-                ></div>
 
-            </div>
+    /* ============================================================
+       BASIC MARKDOWN RENDERER
+       ============================================================ */
 
-        </div>
+    function renderText(value) {
 
-    </section>
+      if (value === null || value === undefined) {
+        return "";
+      }
 
+      let text = escapeHTML(String(value));
 
+      text = text.replace(
+        /\*\*(.*?)\*\*/g,
+        "<strong>$1</strong>"
+      );
 
-    <!-- =========================================================
-         DISCLAIMER
-         ========================================================= -->
+      text = text.replace(
+        /\*(.*?)\*/g,
+        "<em>$1</em>"
+      );
 
-    <section>
+      text = text.replace(
+        /\n/g,
+        "<br>"
+      );
 
-        <div class="container">
+      return text;
 
-            <div class="notice">
+    }
 
-                <strong>
-                    Discussion rules:
-                </strong>
 
-                Please do not post private information,
-                bank details, phone numbers, passwords,
-                personal documents or identifying information
-                about other people.
+    /* ============================================================
+       RENDER LIST
+       ============================================================ */
 
-                <br><br>
+    function renderList(items, emptyText) {
 
-                This platform is intended for education and awareness.
+      if (!Array.isArray(items) || items.length === 0) {
 
-                <br><br>
+        return `
+          <p style="color:#7895b3;">
+            ${escapeHTML(emptyText)}
+          </p>
+        `;
 
-                <strong>
-                    Important:
-                </strong>
+      }
 
-                AI-generated assessments may contain errors.
-                Always verify important claims using independent
-                sources and official records before making financial
-                or legal decisions.
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         FOOTER
-         ========================================================= -->
-
-    <footer>
-
-        <div class="container">
-
-            MLM Awareness · Educational Project
-
-            <br>
-
-            Built for research, awareness and informed decision-making.
-
-        </div>
-
-    </footer>
-
-
-
-    <!-- =========================================================
-         JAVASCRIPT
-         ========================================================= -->
-
-    <script>
-
-
-        /* =========================================================
-           CONFIGURATION
-           ========================================================= */
-
-        const AI_ENDPOINT =
-            "https://mlm-awareness-ai.khabi.workers.dev/ask";
-
-
-        const MLM_ASSESS_ENDPOINT =
-            "https://mlm-awareness-ai.khabi.workers.dev/assess";
-
-
-
-        /* =========================================================
-           SECURITY HELPERS
-           ========================================================= */
-
-        function escapeHTML(value) {
-
-            return String(value)
-
-                .replace(
-                    /&/g,
-                    "&amp;"
-                )
-
-                .replace(
-                    /</g,
-                    "&lt;"
-                )
-
-                .replace(
-                    />/g,
-                    "&gt;"
-                )
-
-                .replace(
-                    /"/g,
-                    "&quot;"
-                )
-
-                .replace(
-                    /'/g,
-                    "&#039;"
-                );
-        }
-
-
-        function escapeAttribute(value) {
-
-            return String(value)
-
-                .replace(
-                    /&/g,
-                    "&amp;"
-                )
-
-                .replace(
-                    /"/g,
-                    "&quot;"
-                )
-
-                .replace(
-                    /</g,
-                    "&lt;"
-                )
-
-                .replace(
-                    />/g,
-                    "&gt;"
-                );
-        }
-
-
-
-        /* =========================================================
-           RECRUITMENT CALCULATOR
-           ========================================================= */
-
-        function calculateRecruitment() {
-
-            const recruitment =
-                Number(
-                    document.getElementById(
-                        "recruitment"
-                    ).value
-                );
-
-
-            const levels =
-                Number(
-                    document.getElementById(
-                        "levels"
-                    ).value
-                );
-
-
-            const output =
-                document.getElementById(
-                    "calculationResult"
-                );
-
-
-            if (
-                !Number.isFinite(recruitment) ||
-                !Number.isFinite(levels) ||
-                recruitment < 1 ||
-                levels < 1
-            ) {
-
-                output.innerHTML =
-                    "Please enter valid numbers.";
-
-                return;
-            }
-
-
-            let total =
-                1;
-
-
-            let current =
-                1;
-
-
-            let html =
-                "<h3>Recruitment Growth</h3>";
-
-
-            html +=
-                "<ol>";
-
-
-            for (
-                let level = 1;
-                level <= levels;
-                level++
-            ) {
-
-                current =
-                    current * recruitment;
-
-
-                total =
-                    total + current;
-
-
-                html +=
-                    "<li>Level " +
-                    level +
-                    ": " +
-                    current.toLocaleString() +
-                    " new people</li>";
-            }
-
-
-            html +=
-                "</ol>";
-
-
-            html +=
-                "<strong>Total including the original person: " +
-                total.toLocaleString() +
-                "</strong>";
-
-
-            output.innerHTML =
-                html;
-        }
-
-
-
-        /* =========================================================
-           AI GENERAL DISCUSSION
-           ========================================================= */
-
-        async function askAI() {
-
-            const question =
-                document
-                    .getElementById(
-                        "question"
-                    )
-                    .value
-                    .trim();
-
-
-            const status =
-                document.getElementById(
-                    "aiStatus"
-                );
-
-
-            const answer =
-                document.getElementById(
-                    "aiAnswer"
-                );
-
-
-            const sources =
-                document.getElementById(
-                    "aiSources"
-                );
-
-
-            answer.innerHTML =
-                "";
-
-            sources.innerHTML =
-                "";
-
-
-            if (!question) {
-
-                status.innerHTML =
-                    "Please enter a question first.";
-
-                return;
-            }
-
-
-            status.innerHTML =
-                "Researching your question…";
-
-
-            try {
-
-                const response =
-                    await fetch(
-                        AI_ENDPOINT,
-                        {
-
-                            method:
-                                "POST",
-
-                            headers:
-                                {
-                                    "Content-Type":
-                                        "application/json"
-                                },
-
-                            body:
-                                JSON.stringify({
-                                    question:
-                                        question
-                                })
-                        }
-                    );
-
-
-                const responseText =
-                    await response.text();
-
-
-                console.log(
-                    "AI HTTP status:",
-                    response.status
-                );
-
-
-                console.log(
-                    "AI response:",
-                    responseText
-                );
-
-
-                let data;
-
-
-                try {
-
-                    data =
-                        JSON.parse(
-                            responseText
-                        );
-
-                } catch {
-
-                    throw new Error(
-                        "The AI service returned invalid JSON."
-                    );
-                }
-
-
-                if (!response.ok) {
-
-                    throw new Error(
-                        data.error ||
-                        data.message ||
-                        "The AI service returned an error."
-                    );
-                }
-
-
-                status.innerHTML =
-                    "Research completed.";
-
-
-                answer.innerHTML =
-                    formatAIAnswer(
-                        data.answer ||
-                        "No answer was returned."
-                    );
-
-
-                if (
-                    Array.isArray(
-                        data.sources
-                    ) &&
-                    data.sources.length > 0
-                ) {
-
-                    let html =
-                        "<h3>Research sources</h3>";
-
-
-                    data.sources.forEach(
-                        function(source) {
-
-                            if (
-                                !source ||
-                                !source.uri
-                            ) {
-                                return;
-                            }
-
-
-                            html += `
-                                <a
-                                    class="source"
-                                    href="${escapeAttribute(
-                                        source.uri
-                                    )}"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    ${escapeHTML(
-                                        source.title ||
-                                        source.uri
-                                    )}
-                                </a>
-                            `;
-                        }
-                    );
-
-
-                    sources.innerHTML =
-                        html;
-                }
-
-
-            } catch (error) {
-
-                console.error(
-                    "AI error:",
-                    error
-                );
-
-
-                status.innerHTML =
-                    "The AI research service could not be reached.";
-
-
-                answer.innerHTML = `
-
-                    <div class="danger">
-
-                        <strong>
-                            Something went wrong.
-                        </strong>
-
-                        <p>
-                            ${escapeHTML(
-                                error.message ||
-                                "Unknown error"
-                            )}
-                        </p>
-
-                        <p>
-                            Please try again in a moment.
-                        </p>
-
-                    </div>
-
-                `;
-            }
-        }
-
-
-
-        function formatAIAnswer(text) {
-
-            return escapeHTML(text)
-
-                .replace(
-                    /\n\n/g,
-                    "<br><br>"
-                )
-
-                .replace(
-                    /\n/g,
-                    "<br>"
-                );
-        }
-
-
-
-        /* =========================================================
-           MLM COMPANY RISK ASSESSMENT
-           ========================================================= */
-
-        async function assessMLMCompany() {
-
-            const companyInput =
-                document.getElementById(
-                    "companyName"
-                );
-
-
-            const status =
-                document.getElementById(
-                    "riskStatus"
-                );
-
-
-            const result =
-                document.getElementById(
-                    "riskResult"
-                );
-
-
-            if (
-                !companyInput ||
-                !status ||
-                !result
-            ) {
-
-                console.error(
-                    "Risk assessment elements not found."
-                );
-
-                return;
-            }
-
-
-            const company =
-                companyInput
-                    .value
-                    .trim();
-
-
-            if (!company) {
-
-                status.innerHTML =
-                    "Please enter an MLM company name.";
-
-                result.innerHTML =
-                    "";
-
-                companyInput.focus();
-
-                return;
-            }
-
-
-            status.innerHTML =
-                "🔎 Researching " +
-                escapeHTML(company) +
-                "…";
-
-
-            result.innerHTML = `
-
-                <div class="researching">
-
-                    <h3>
-                        🔎 Researching
-                        ${escapeHTML(company)}
-                    </h3>
-
-                    <p>
-                        The system is analysing the company
-                        and evaluating potential MLM risk indicators.
-                    </p>
-
-                    <p>
-                        Please wait…
-                    </p>
-
-                </div>
-
-            `;
-
-
-            try {
-
-                console.log(
-                    "================================================"
-                );
-
-                console.log(
-                    "MLM COMPANY RISK ASSESSMENT"
-                );
-
-                console.log(
-                    "Endpoint:",
-                    MLM_ASSESS_ENDPOINT
-                );
-
-                console.log(
-                    "Company:",
-                    company
-                );
-
-
-                const response =
-                    await fetch(
-                        MLM_ASSESS_ENDPOINT,
-                        {
-
-                            method:
-                                "POST",
-
-                            headers:
-                                {
-                                    "Content-Type":
-                                        "application/json"
-                                },
-
-                            body:
-                                JSON.stringify({
-                                    company:
-                                        company
-                                })
-                        }
-                    );
-
-
-                const responseText =
-                    await response.text();
-
-
-                console.log(
-                    "HTTP status:",
-                    response.status
-                );
-
-
-                console.log(
-                    "Raw Worker response:",
-                    responseText
-                );
-
-
-                let data;
-
-
-                try {
-
-                    data =
-                        JSON.parse(
-                            responseText
-                        );
-
-                } catch {
-
-                    throw new Error(
-                        "The Worker returned invalid JSON."
-                    );
-                }
-
-
-                if (!response.ok) {
-
-                    throw new Error(
-                        data.error ||
-                        data.message ||
-                        "The MLM assessment service returned an error."
-                    );
-                }
-
-
-                if (!data.assessment) {
-
-                    throw new Error(
-                        "The Worker returned no assessment."
-                    );
-                }
-
-
-                status.innerHTML =
-                    "Assessment completed.";
-
-
-                renderMLMRiskResult(
-                    data.assessment,
-                    data.sources || [],
-                    company
-                );
-
-
-            } catch (error) {
-
-                console.error(
-                    "MLM assessment error:",
-                    error
-                );
-
-
-                status.innerHTML =
-                    "The MLM research service could not be reached.";
-
-
-                result.innerHTML = `
-
-                    <div class="danger">
-
-                        <h3>
-                            Something went wrong.
-                        </h3>
-
-                        <p>
-                            ${escapeHTML(
-                                error.message ||
-                                "Unknown error"
-                            )}
-                        </p>
-
-                        <p>
-                            Please check the browser
-                            developer console for details.
-                        </p>
-
-                    </div>
-
-                `;
-            }
-        }
-
-
-
-        /* =========================================================
-           RENDER RISK RESULT
-           ========================================================= */
-
-        function renderMLMRiskResult(
-            assessment,
-            sources,
-            company
-        ) {
-
-            const result =
-                document.getElementById(
-                    "riskResult"
-                );
-
-
-            let score =
-                Number(
-                    assessment.riskScore
-                );
-
-
-            if (
-                !Number.isFinite(score)
-            ) {
-
-                score =
-                    5;
-            }
-
-
-            score =
-                Math.max(
-                    0,
-                    Math.min(
-                        10,
-                        score
-                    )
-                );
-
-
-            const riskLevel =
-                assessment.riskLevel ||
-                "Moderate Risk";
-
-
-            const summary =
-                assessment.summary ||
-                "No summary was returned.";
-
-
-            const recommendation =
-                assessment.recommendation ||
-                "Conduct further research before making a decision.";
-
-
-            const redFlags =
-                Array.isArray(
-                    assessment.redFlags
-                )
-                    ? assessment.redFlags
-                    : [];
-
-
-            const yellowFlags =
-                Array.isArray(
-                    assessment.yellowFlags
-                )
-                    ? assessment.yellowFlags
-                    : [];
-
-
-            const greenFlags =
-                Array.isArray(
-                    assessment.greenFlags
-                )
-                    ? assessment.greenFlags
-                    : [];
-
-
-            const questions =
-                Array.isArray(
-                    assessment.questionsToAskBeforeJoining
-                )
-                    ? assessment.questionsToAskBeforeJoining
-                    : [];
-
-
-            const evidence =
-                Array.isArray(
-                    assessment.evidenceNotes
-                )
-                    ? assessment.evidenceNotes
-                    : [];
-
-
-            let riskClass =
-                "risk-yellow";
-
-
-            if (score >= 7) {
-
-                riskClass =
-                    "risk-red";
-
-            } else if (score <= 3) {
-
-                riskClass =
-                    "risk-green";
-            }
-
-
-            result.innerHTML = `
-
-                <div class="risk-card ${riskClass}">
-
-                    <h2>
-                        MLM Risk Assessment
-                    </h2>
-
-                    <h3>
-                        ${escapeHTML(company)}
-                    </h3>
-
-
-                    <div class="risk-score">
-
-                        <div class="score-number">
-
-                            ${score}/10
-
-                        </div>
-
-
-                        <div class="score-label">
-
-                            ${escapeHTML(
-                                riskLevel
-                            )}
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="risk-summary">
-
-                        <h3>
-                            Assessment Summary
-                        </h3>
-
-                        <p>
-                            ${escapeHTML(
-                                summary
-                            )}
-                        </p>
-
-                    </div>
-
-
-                    <div class="recommendation">
-
-                        <h3>
-                            Recommendation
-                        </h3>
-
-                        <p>
-                            ${escapeHTML(
-                                recommendation
-                            )}
-                        </p>
-
-                    </div>
-
-
-                    <div class="flag-section">
-
-                        <h3>
-                            🔴 Potential Red Flags
-                        </h3>
-
-                        ${renderList(
-                            redFlags,
-                            "No specific red flags were identified."
-                        )}
-
-                    </div>
-
-
-                    <div class="flag-section">
-
-                        <h3>
-                            🟡 Areas Requiring Further Investigation
-                        </h3>
-
-                        ${renderList(
-                            yellowFlags,
-                            "No unresolved concerns were identified."
-                        )}
-
-                    </div>
-
-
-                    <div class="flag-section">
-
-                        <h3>
-                            🟢 Positive Indicators
-                        </h3>
-
-                        ${renderList(
-                            greenFlags,
-                            "No clear positive indicators were identified."
-                        )}
-
-                    </div>
-
-
-                    <div class="flag-section">
-
-                        <h3>
-                            ❓ Questions to Ask Before Joining
-                        </h3>
-
-                        ${renderList(
-                            questions,
-                            "No additional questions were returned."
-                        )}
-
-                    </div>
-
-
-                    <div class="flag-section">
-
-                        <h3>
-                            📋 Research Notes
-                        </h3>
-
-                        ${renderList(
-                            evidence,
-                            "No additional evidence notes were returned."
-                        )}
-
-                    </div>
-
-
-                    ${renderSources(sources)}
-
-                </div>
-
-            `;
-        }
-
-
-
-        /* =========================================================
-           RENDER LIST
-           ========================================================= */
-
-        function renderList(
-            items,
-            emptyText
-        ) {
-
-            if (
-                !Array.isArray(items) ||
-                items.length === 0
-            ) {
-
-                return `
-                    <p>
-                        ${escapeHTML(
-                            emptyText
-                        )}
-                    </p>
-                `;
-            }
-
+      return `
+        <ul>
+          ${items.map(function(item) {
 
             return `
-
-                <ul>
-
-                    ${items
-                        .map(
-                            function(item) {
-
-                                return `
-                                    <li>
-                                        ${escapeHTML(
-                                            item
-                                        )}
-                                    </li>
-                                `;
-                            }
-                        )
-                        .join("")
-                    }
-
-                </ul>
-
+              <li>
+                ${renderText(item)}
+              </li>
             `;
+
+          }).join("")}
+        </ul>
+      `;
+
+    }
+
+
+    /* ============================================================
+       RENDER SOURCES
+       ============================================================ */
+
+    function renderSources(sourceList) {
+
+      if (
+        !Array.isArray(sourceList) ||
+        sourceList.length === 0
+      ) {
+
+        return `
+          <p style="color:#7895b3;">
+            No public sources were returned by the research service.
+          </p>
+
+          <p style="color:#7895b3;">
+            This does NOT automatically mean the company is safe.
+            It means the system did not receive usable source links.
+          </p>
+        `;
+
+      }
+
+
+      return sourceList.map(function(source) {
+
+        if (!source) {
+          return "";
+        }
+
+        if (typeof source === "string") {
+
+          return `
+            <div class="source-item">
+              ${renderText(source)}
+            </div>
+          `;
+
+        }
+
+        const title =
+          source.title ||
+          source.name ||
+          source.label ||
+          "Research source";
+
+        const url =
+          source.url ||
+          source.uri ||
+          source.link ||
+          "";
+
+        if (!url) {
+
+          return `
+            <div class="source-item">
+              ${escapeHTML(title)}
+            </div>
+          `;
+
+        }
+
+        return `
+          <div class="source-item">
+
+            <a
+              href="${escapeHTML(url)}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ${escapeHTML(title)}
+            </a>
+
+          </div>
+        `;
+
+      }).join("");
+
+    }
+
+
+    /* ============================================================
+       STATUS HELPERS
+       ============================================================ */
+
+    function setStatus(element, message, type) {
+
+      element.className =
+        "status show " + (type || "");
+
+      element.innerHTML =
+        message;
+
+    }
+
+
+    function clearStatus(element) {
+
+      element.className =
+        "status";
+
+      element.innerHTML =
+        "";
+
+    }
+
+
+    /* ============================================================
+       RISK CLASSIFICATION
+       ============================================================ */
+
+    function getRiskClass(score) {
+
+      if (score >= 7) {
+        return "risk-red";
+      }
+
+      if (score >= 4) {
+        return "risk-yellow";
+      }
+
+      return "risk-green";
+
+    }
+
+
+    function getRiskLabel(score) {
+
+      if (score >= 7) {
+        return "High Risk";
+      }
+
+      if (score >= 4) {
+        return "Moderate Risk";
+      }
+
+      return "Lower Risk";
+
+    }
+
+
+    /* ============================================================
+       RENDER MLM RISK RESULT
+       ============================================================ */
+
+    function renderMLMRiskResult(data, company) {
+
+      riskResult.classList.add("show");
+
+
+      let assessment =
+        data.assessment ||
+        data.result ||
+        data;
+
+
+      if (!assessment) {
+
+        throw new Error(
+          "No assessment was returned by the Worker."
+        );
+
+      }
+
+
+      let score =
+        Number(
+          assessment.riskScore ??
+          assessment.score ??
+          5
+        );
+
+
+      if (!Number.isFinite(score)) {
+        score = 5;
+      }
+
+
+      score =
+        Math.max(
+          0,
+          Math.min(
+            10,
+            score
+          )
+        );
+
+
+      const level =
+        assessment.riskLevel ||
+        getRiskLabel(score);
+
+
+      const summaryText =
+        assessment.summary ||
+        "No summary was returned.";
+
+
+      const recommendationText =
+        assessment.recommendation ||
+        "Conduct further independent research before making a decision.";
+
+
+      const model =
+        assessment.businessModel ||
+        "Not specified";
+
+
+      const confidenceText =
+        assessment.confidence ||
+        "Not specified";
+
+
+      const red =
+        Array.isArray(assessment.redFlags)
+          ? assessment.redFlags
+          : [];
+
+
+      const yellow =
+        Array.isArray(assessment.yellowFlags)
+          ? assessment.yellowFlags
+          : [];
+
+
+      const green =
+        Array.isArray(assessment.greenFlags)
+          ? assessment.greenFlags
+          : [];
+
+
+      const questionList =
+        Array.isArray(assessment.questionsToAskBeforeJoining)
+          ? assessment.questionsToAskBeforeJoining
+          : (
+              Array.isArray(assessment.questions)
+                ? assessment.questions
+                : []
+            );
+
+
+      const evidenceList =
+        Array.isArray(assessment.evidenceNotes)
+          ? assessment.evidenceNotes
+          : (
+              Array.isArray(assessment.evidence)
+                ? assessment.evidence
+                : []
+            );
+
+
+      const sourceList =
+        Array.isArray(data.sources)
+          ? data.sources
+          : (
+              Array.isArray(assessment.sources)
+                ? assessment.sources
+                : []
+            );
+
+
+      scoreNumber.textContent =
+        score.toFixed(1);
+
+
+      scoreNumber.className =
+        "score-number " +
+        getRiskClass(score);
+
+
+      riskBadge.className =
+        "risk-badge " +
+        getRiskClass(score);
+
+
+      riskBadge.textContent =
+        level;
+
+
+      resultCompany.textContent =
+        company;
+
+
+      businessModel.textContent =
+        model;
+
+
+      confidence.textContent =
+        confidenceText;
+
+
+      summary.innerHTML =
+        renderText(summaryText);
+
+
+      recommendation.innerHTML =
+        "Recommendation: " +
+        renderText(recommendationText);
+
+
+      redFlags.innerHTML =
+        renderList(
+          red,
+          "No specific red flags were identified from the available assessment."
+        );
+
+
+      yellowFlags.innerHTML =
+        renderList(
+          yellow,
+          "No specific unresolved concerns were identified."
+        );
+
+
+      greenFlags.innerHTML =
+        renderList(
+          green,
+          "No clear positive indicators were identified."
+        );
+
+
+      questions.innerHTML =
+        renderList(
+          questionList,
+          "No questions were returned."
+        );
+
+
+      evidence.innerHTML =
+        renderList(
+          evidenceList,
+          "No additional evidence notes were returned."
+        );
+
+
+      sources.innerHTML =
+        renderSources(sourceList);
+
+
+      riskResult.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    }
+
+
+    /* ============================================================
+       MLM COMPANY ASSESSMENT
+       ============================================================ */
+
+    async function assessMLMCompany() {
+
+      const company =
+        companyInput.value.trim();
+
+
+      /* VALIDATION */
+
+      if (!company) {
+
+        setStatus(
+          assessmentStatus,
+          "Please enter an MLM company name.",
+          "error"
+        );
+
+        companyInput.focus();
+
+        return;
+      }
+
+
+      if (company.length > 150) {
+
+        setStatus(
+          assessmentStatus,
+          "Please enter a shorter company name.",
+          "error"
+        );
+
+        companyInput.focus();
+
+        return;
+      }
+
+
+      /* CLEAR PREVIOUS RESULT */
+
+      riskResult.classList.remove("show");
+
+
+      /* LOADING */
+
+      assessButton.disabled = true;
+
+
+      setStatus(
+        assessmentStatus,
+        `
+          <span class="loading">
+            <span class="spinner"></span>
+            Researching ${escapeHTML(company)}...
+          </span>
+        `,
+        ""
+      );
+
+
+      try {
+
+        console.log(
+          "MLM assessment endpoint:",
+          ASSESS_ENDPOINT
+        );
+
+        console.log(
+          "Company:",
+          company
+        );
+
+
+        const response =
+          await fetch(
+            ASSESS_ENDPOINT,
+            {
+              method: "POST",
+
+              headers: {
+                "Content-Type":
+                  "application/json"
+              },
+
+              body:
+                JSON.stringify({
+                  company: company
+                })
+            }
+          );
+
+
+        const responseText =
+          await response.text();
+
+
+        console.log(
+          "Assessment HTTP status:",
+          response.status
+        );
+
+
+        console.log(
+          "Assessment raw response:",
+          responseText
+        );
+
+
+        let data;
+
+
+        try {
+
+          data =
+            JSON.parse(responseText);
+
+        } catch (parseError) {
+
+          throw new Error(
+            "The Worker returned invalid JSON. HTTP " +
+            response.status
+          );
+
         }
 
 
+        if (!response.ok) {
 
-        /* =========================================================
-           RENDER SOURCES
-           ========================================================= */
+          throw new Error(
+            data.error ||
+            data.message ||
+            "The Worker returned HTTP " +
+            response.status
+          );
 
-        function renderSources(
-            sources
+        }
+
+
+        renderMLMRiskResult(
+          data,
+          company
+        );
+
+
+        setStatus(
+          assessmentStatus,
+          "Assessment completed.",
+          "success"
+        );
+
+
+      } catch (error) {
+
+        console.error(
+          "MLM assessment error:",
+          error
+        );
+
+
+        setStatus(
+          assessmentStatus,
+          `
+            The company research service could not be reached.
+            <br><br>
+            <strong>${escapeHTML(
+              error.message || "Unknown error"
+            )}</strong>
+          `,
+          "error"
+        );
+
+      } finally {
+
+        assessButton.disabled =
+          false;
+
+      }
+
+    }
+
+
+    /* ============================================================
+       ASK GENERAL MLM QUESTION
+       ============================================================ */
+
+    async function askQuestion() {
+
+      const question =
+        questionInput.value.trim();
+
+
+      if (!question) {
+
+        setStatus(
+          askStatus,
+          "Please enter a question.",
+          "error"
+        );
+
+        questionInput.focus();
+
+        return;
+      }
+
+
+      askButton.disabled =
+        true;
+
+
+      answerBox.style.display =
+        "none";
+
+
+      setStatus(
+        askStatus,
+        `
+          <span class="loading">
+            <span class="spinner"></span>
+            Researching your question...
+          </span>
+        `,
+        ""
+      );
+
+
+      try {
+
+        console.log(
+          "Ask endpoint:",
+          ASK_ENDPOINT
+        );
+
+
+        const response =
+          await fetch(
+            ASK_ENDPOINT,
+            {
+              method: "POST",
+
+              headers: {
+                "Content-Type":
+                  "application/json"
+              },
+
+              body:
+                JSON.stringify({
+                  question: question
+                })
+            }
+          );
+
+
+        const responseText =
+          await response.text();
+
+
+        console.log(
+          "Ask HTTP status:",
+          response.status
+        );
+
+
+        console.log(
+          "Ask raw response:",
+          responseText
+        );
+
+
+        let data;
+
+
+        try {
+
+          data =
+            JSON.parse(responseText);
+
+        } catch (error) {
+
+          throw new Error(
+            "The Worker returned invalid JSON."
+          );
+
+        }
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            data.error ||
+            data.message ||
+            "The Worker returned HTTP " +
+            response.status
+          );
+
+        }
+
+
+        const answerText =
+          data.answer ||
+          data.response ||
+          data.result ||
+          "No answer was returned.";
+
+
+        answer.innerHTML =
+          renderText(answerText);
+
+
+        answerBox.style.display =
+          "block";
+
+
+        setStatus(
+          askStatus,
+          "Research completed.",
+          "success"
+        );
+
+
+        answerBox.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+
+      } catch (error) {
+
+        console.error(
+          "Question error:",
+          error
+        );
+
+
+        setStatus(
+          askStatus,
+          `
+            The AI research service could not be reached.
+            <br><br>
+            <strong>${escapeHTML(
+              error.message || "Unknown error"
+            )}</strong>
+          `,
+          "error"
+        );
+
+      } finally {
+
+        askButton.disabled =
+          false;
+
+      }
+
+    }
+
+
+    /* ============================================================
+       CLEAR ASSESSMENT
+       ============================================================ */
+
+    function clearAssessment() {
+
+      companyInput.value =
+        "";
+
+      riskResult.classList.remove(
+        "show"
+      );
+
+      clearStatus(
+        assessmentStatus
+      );
+
+      companyInput.focus();
+
+    }
+
+
+    /* ============================================================
+       BUTTON EVENTS
+       ============================================================ */
+
+    assessButton.addEventListener(
+      "click",
+      assessMLMCompany
+    );
+
+
+    clearButton.addEventListener(
+      "click",
+      clearAssessment
+    );
+
+
+    askButton.addEventListener(
+      "click",
+      askQuestion
+    );
+
+
+    /* ============================================================
+       ENTER KEY
+       ============================================================ */
+
+    companyInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.key === "Enter"
         ) {
 
-            if (
-                !Array.isArray(sources) ||
-                sources.length === 0
-            ) {
+          event.preventDefault();
 
-                return `
+          assessMLMCompany();
 
-                    <div class="sources">
-
-                        <h3>
-                            🔎 Research Sources
-                        </h3>
-
-                        <p>
-                            No public sources were returned
-                            by the research service.
-                        </p>
-
-                        <p>
-                            This does not automatically mean
-                            the company is safe or unsafe.
-                        </p>
-
-                    </div>
-
-                `;
-            }
-
-
-            return `
-
-                <div class="sources">
-
-                    <h3>
-                        🔎 Research Sources
-                    </h3>
-
-                    <p>
-                        These sources are presented as
-                        research material. A source does not
-                        automatically prove that a claim is true.
-                    </p>
-
-
-                    ${sources
-                        .map(
-                            function(source) {
-
-                                if (
-                                    !source ||
-                                    !source.uri
-                                ) {
-
-                                    return "";
-                                }
-
-
-                                return `
-
-                                    <a
-                                        class="source"
-                                        href="${escapeAttribute(
-                                            source.uri
-                                        )}"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        ${escapeHTML(
-                                            source.title ||
-                                            source.uri
-                                        )}
-                                    </a>
-
-                                `;
-                            }
-                        )
-                        .join("")
-                    }
-
-                </div>
-
-            `;
         }
 
+      }
+    );
 
 
-        /* =========================================================
-           INITIAL CALCULATOR
-           ========================================================= */
+    questionInput.addEventListener(
+      "keydown",
+      function(event) {
 
-        calculateRecruitment();
+        if (
+          event.key === "Enter" &&
+          !event.shiftKey
+        ) {
+
+          event.preventDefault();
+
+          askQuestion();
+
+        }
+
+      }
+    );
 
 
-    </script>
+    /* ============================================================
+       STARTUP
+       ============================================================ */
 
+    console.log(
+      "MLM Awareness AI frontend loaded."
+    );
+
+    console.log(
+      "Ask endpoint:",
+      ASK_ENDPOINT
+    );
+
+    console.log(
+      "Assessment endpoint:",
+      ASSESS_ENDPOINT
+    );
+
+  </script>
 
 </body>
-
 </html>
